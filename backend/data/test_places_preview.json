@@ -1,0 +1,78 @@
+[
+  {
+    "id": "P001",
+    "name": "Bãi Dài Cam Ranh",
+    "destination": "Khánh Hòa",
+    "category": "sightseeing",
+    "original_description": "Bãi biển hoang sơ với vẻ đẹp tự nhiên, lý tưởng để thư giãn và tắm biển",
+    "original_tags": [
+      "biển",
+      "vui chơi",
+      "chụp ảnh",
+      "nghĩ dưỡng"
+    ],
+    "rating": "4.8/5",
+    "image": "https://www.uncovervietnam.com/wp-content/uploads/2021/06/bai-dai-beach-cam-ranh-vietnam.jpg",
+    "reference_context": "Đại Nội Huế, biểu tượng rực rỡ của triều Nguyễn, không chỉ là một công trình kiến trúc đồ sộ mà còn là kho tàng văn hóa lưu giữ những giá trị lịch sử quý báu. Khi bước qua cánh cổng Ngọ Môn, du khách như lạc vào không gian thời gian, nơi mà những hình ảnh của vua chúa, hoàng hậu và những lễ hội long trọng vẫn còn vang vọng. Những bức tường thành kiên cố, được xây dựng từ gạch ngói đất nung, đã chứng kiến bao thăng trầm của lịch sử, từ những cuộc chiến tranh khốc liệt đến những khoảnh khắc hòa bình tươi đẹp.\n\nĐi dạo trong khuôn viên của Đại Nội, bạn sẽ bị cuốn hút bởi sự tinh tế trong từng chi tiết kiến trúc, từ những hoa văn chạm khắc mềm mại trên cột gỗ cho đến những bức tranh tường sống động, mỗi tác phẩm đều kể lại một câu chuyện riêng. Đặc biệt, các điện Thái Hòa, điện Khánh Hòa hay lă",
+    "tags": [
+      "khánh hòa",
+      "biển",
+      "vui chơi",
+      "chụp ảnh",
+      "nghĩ dưỡng"
+    ],
+    "description": "Bãi biển hoang sơ với vẻ đẹp tự nhiên, lý tưởng để thư giãn và tắm biển"
+  },
+  {
+    "id": "P002",
+    "name": "Tháp Bà Ponagar",
+    "destination": "Khánh Hòa",
+    "category": "sightseeing",
+    "original_description": "Công trình kiến trúc Chăm cổ, nơi du khách có thể tìm hiểu về lịch sử và văn hóa Chăm",
+    "original_tags": [
+      "tham quan",
+      "tháp",
+      "chụp ảnh",
+      "di tích",
+      "văn hóa"
+    ],
+    "rating": "4.5/5",
+    "image": "https://tse4.mm.bing.net/th?id=OIP.OHY4mpZ7m_uKpGiC1e9D8wHaF7&pid=Api&P=0&h=220",
+    "reference_context": "Việt Nam, một đất nước nhỏ bé nhưng giàu lịch sử, hiện lên như một bức tranh đa sắc màu với những dấu ấn văn hóa đặc trưng qua các thời kỳ. Từ những ngày đầu lập quốc dưới triều đại Hùng Vương, nơi mà huyền thoại và thực tại giao thoa, Việt Nam đã khẳng định bản sắc độc lập. Những di sản như Tháp Bà Ponagar hay Đền Hùng vẫn còn lưu giữ hơi thở của tổ tiên, tạo nên nền tảng vững chắc cho tâm hồn dân tộc.\n\nBước vào thời kỳ phong kiến, bạn sẽ bị cuốn hút bởi vẻ đẹp lộng lẫy của cố đô Huế, nơi mà mỗi ngõ ngách, mỗi ngôi chùa đều chứa đựng cả một câu chuyện lịch sử. Hà Nội, với những con phố cổ rêu phong, không chỉ là nơi lưu giữ truyền thống mà còn là chứng nhân cho những biến động trong thời kỳ đấu tranh giành độc lập. \n\nĐến với miền Nam, không thể không nhắc đến Sài Gòn, nơi mà sự giao thoa ",
+    "tags": [
+      "khánh hòa",
+      "tham quan",
+      "tháp",
+      "chụp ảnh",
+      "di tích",
+      "văn hóa"
+    ],
+    "description": "Công trình kiến trúc Chăm cổ, nơi du khách có thể tìm hiểu về lịch sử và văn hóa Chăm"
+  },
+  {
+    "id": "P003",
+    "name": "Thành cổ Diên Khánh",
+    "destination": "Khánh Hòa",
+    "category": "sightseeing",
+    "original_description": "Di tích lịch sử với kiến trúc thành cổ độc đáo, được xây dựng từ thời Nguyễn.",
+    "original_tags": [
+      "tham quan",
+      "di tích",
+      "lịch sử",
+      "chụp ảnh",
+      "văn hóa"
+    ],
+    "rating": "4.5/5",
+    "image": "https://tse2.mm.bing.net/th?id=OIP.BzA87w8zdYgM0o41HtKQCQHaFj&pid=Api&P=0&h=220",
+    "reference_context": "Đại Nội Huế, biểu tượng rực rỡ của triều Nguyễn, không chỉ là một công trình kiến trúc đồ sộ mà còn là kho tàng văn hóa lưu giữ những giá trị lịch sử quý báu. Khi bước qua cánh cổng Ngọ Môn, du khách như lạc vào không gian thời gian, nơi mà những hình ảnh của vua chúa, hoàng hậu và những lễ hội long trọng vẫn còn vang vọng. Những bức tường thành kiên cố, được xây dựng từ gạch ngói đất nung, đã chứng kiến bao thăng trầm của lịch sử, từ những cuộc chiến tranh khốc liệt đến những khoảnh khắc hòa bình tươi đẹp.\n\nĐi dạo trong khuôn viên của Đại Nội, bạn sẽ bị cuốn hút bởi sự tinh tế trong từng chi tiết kiến trúc, từ những hoa văn chạm khắc mềm mại trên cột gỗ cho đến những bức tranh tường sống động, mỗi tác phẩm đều kể lại một câu chuyện riêng. Đặc biệt, các điện Thái Hòa, điện Khánh Hòa hay lă",
+    "tags": [
+      "khánh hòa",
+      "tham quan",
+      "di tích",
+      "lịch sử",
+      "chụp ảnh",
+      "văn hóa"
+    ],
+    "description": "Di tích lịch sử với kiến trúc thành cổ độc đáo, được xây dựng từ thời Nguyễn."
+  }
+]
