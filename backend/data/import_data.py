@@ -7,7 +7,11 @@ MONGO_URI = "mongodb+srv://minhduc:minhduc123@cluster0.e9bvp5a.mongodb.net/"
 
 DATABASE_NAME = "get_set_n_go_db"
 COLLECTION_NAME = "Places"
+
 EXCEL_FILE_PATH = "backend/data/DataSet.xlsx"
+
+EXCEL_FILE_PATH = "DataSet.xlsx"
+
 
 def import_excel_to_mongodb():
     try:
