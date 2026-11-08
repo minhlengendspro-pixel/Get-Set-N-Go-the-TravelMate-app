@@ -1,83 +1,53 @@
-
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 from services.place_recommendation import recommend_places
+from services.place_data import get_places_by_destination
 
-router = APIRouter(
-    prefix="/api/places",
-    tags=["Places"]
-)
-
-# Dữ liệu mẫu để kiểm thử API.
-# Sau này sẽ thay bằng dữ liệu lấy từ MongoDB.
-MOCK_PLACES = [
-    {
-        "id": "1",
-        "name": "Bãi Dài",
-        "destination": "Khánh Hòa",
-        "description": "Bãi biển đẹp, thích hợp chụp ảnh và vui chơi",
-        "tags": ["biển", "chụp ảnh", "vui chơi"],
-        "rating": 4.8,
-        "image_url": ""
-    },
-    {
-        "id": "2",
-        "name": "Tháp Bà Ponagar",
-        "destination": "Khánh Hòa",
-        "description": "Di tích văn hóa Chăm",
-        "tags": ["tham quan", "văn hóa", "di tích"],
-        "rating": 4.5,
-        "image_url": ""
-    },
-    {
-        "id": "3",
-        "name": "VinWonders Nha Trang",
-        "destination": "Khánh Hòa",
-        "description": "Khu vui chơi giải trí",
-        "tags": ["vui chơi", "chụp ảnh", "giải trí"],
-        "rating": 4.7,
-        "image_url": ""
-    },
-    {
-        "id": "4",
-        "name": "Bà Nà Hills",
-        "destination": "Đà Nẵng",
-        "description": "Khu du lịch nổi tiếng",
-        "tags": ["núi", "chụp ảnh", "tham quan"],
-        "rating": 4.8,
-        "image_url": ""
-    }
-]
+router = APIRouter(prefix="/api/places", tags=["Places"])
 
 
-# Cấu trúc dữ liệu đầu vào của API
 class RecommendRequest(BaseModel):
     destination: str = Field(min_length=1)
     interests: list[str] = Field(min_length=1)
     top_k: int = Field(default=10, ge=1, le=50)
 
 
+# API lấy danh sách địa điểm từ MongoDB
 @router.get("/")
-def get_places():
-    return {
-        "success": True,
-        "total": len(MOCK_PLACES),
-        "data": MOCK_PLACES
-    }
+def get_places(destination: str):
+    try:
+        places = get_places_by_destination(destination)
+
+        return {
+            "success": True,
+            "total": len(places),
+            "data": places
+        }
+
+    except Exception:
+        raise HTTPException(
+            status_code=500,
+            detail="Không thể lấy dữ liệu địa điểm từ MongoDB"
+        )
 
 
+# API gợi ý địa điểm
 @router.post("/recommend")
 def recommend(request: RecommendRequest):
-
     try:
+        # 1. Lấy dữ liệu từ MongoDB
+        places = get_places_by_destination(request.destination)
+
+        # 2. Đưa dữ liệu vào thuật toán gợi ý
         results = recommend_places(
             destination=request.destination,
             interests=request.interests,
-            places=MOCK_PLACES,
+            places=places,
             top_k=request.top_k
         )
 
+        # 3. Trả kết quả cho frontend
         return {
             "success": True,
             "total": len(results),
@@ -88,4 +58,10 @@ def recommend(request: RecommendRequest):
         raise HTTPException(
             status_code=400,
             detail=str(error)
+        )
+
+    except Exception:
+        raise HTTPException(
+            status_code=500,
+            detail="Lỗi khi xử lý yêu cầu gợi ý địa điểm"
         )

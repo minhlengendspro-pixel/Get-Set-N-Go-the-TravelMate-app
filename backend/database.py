@@ -1,17 +1,32 @@
+import os
+from pathlib import Path
 from pymongo import MongoClient
-uri = "mongodb://minhlengendspro_db_user:minhduc123@ac-witmyyy-shard-00-00.e9bvp5a.mongodb.net:27017,ac-witmyyy-shard-00-01.e9bvp5a.mongodb.net:27017,ac-witmyyy-shard-00-02.e9bvp5a.mongodb.net:27017/?ssl=true&replicaSet=atlas-u5mki4-shard-0&authSource=admin&compressors=zlib"
-client = MongoClient(uri)
-try:
-    client.admin.command("ping")
-    print("Connected successfully")
-    client.close()
+from dotenv import load_dotenv
 
-except Exception as e:
-    raise Exception(
-        "The following error occurred: ", e)
+# Xác định thư mục chứa database.py
+BASE_DIR = Path(__file__).resolve().parent
 
-MONGO_URI = "mongodb+srv://minhlengendspro_db_user:minhduc123@ac-witmyyy-shard-00-00.e9bvp5a.mongodb.net:27017,ac-witmyyy-shard-00-01.e9bvp5a.mongodb.net:27017,ac-witmyyy-shard-00-02.e9bvp5a.mongodb.net:27017/?ssl=true&replicaSet=atlas-u5mki4-shard-0&authSource=admin&compressors=zlib"
-# khởi động kết n
-client = MongoClient(MONGO_URI)
+# Đọc file .env trong backend
+load_dotenv(BASE_DIR / ".env")
+
+MONGO_URI = os.getenv("MONGO_URI")
+
+if not MONGO_URI:
+    raise ValueError("Không tìm thấy MONGO_URI trong backend/.env")
+
+client = MongoClient(
+    MONGO_URI,
+    serverSelectionTimeoutMS=5000
+)
 
 db = client["get_set_n_go_db"]
+
+
+def check_connection():
+    try:
+        client.admin.command("ping")
+        print("MongoDB connected successfully!")
+        return True
+    except Exception as error:
+        print(f"MongoDB connection failed: {error}")
+        return False
