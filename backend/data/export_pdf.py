@@ -19,7 +19,7 @@ def export_pdf():
     print("==================================================================")
 
     if not os.path.exists(HTML_PATH):
-        print(f"❌ Không tìm thấy file HTML: {HTML_PATH}")
+        print(f" Không tìm thấy file HTML: {HTML_PATH}")
         return
 
     # Tìm trình duyệt có sẵn trên máy
@@ -30,7 +30,7 @@ def export_pdf():
             break
 
     if not selected_browser:
-        print("❌ Không tìm thấy Microsoft Edge hoặc Google Chrome trên máy.")
+        print(" Không tìm thấy Microsoft Edge hoặc Google Chrome trên máy.")
         return
 
     browser_name = os.path.basename(selected_browser)
@@ -50,14 +50,14 @@ def export_pdf():
         if os.path.exists(PDF_PATH):
             file_size_kb = round(os.path.getsize(PDF_PATH) / 1024, 1)
             print("==================================================================")
-            print(f"✅ XUẤT THÀNH CÔNG FILE PDF: {file_size_kb} KB")
-            print(f"📁 Vị trí lưu: {PDF_PATH}")
+            print(f" XUẤT THÀNH CÔNG FILE PDF: {file_size_kb} KB")
+            print(f" Vị trí lưu: {PDF_PATH}")
             print("==================================================================")
-            print("👉 Bạn có thể mở File Explorer trong thư mục 'backend/data/' để xem ngay!")
+            print(" Bạn có thể mở File Explorer trong thư mục 'backend/data/' để xem ngay!")
         else:
-            print("⚠️ Lệnh chạy xong nhưng chưa thấy file PDF được tạo.")
+            print(" Lệnh chạy xong nhưng chưa thấy file PDF được tạo.")
     except Exception as e:
-        print(f"❌ Lỗi khi xuất PDF: {e}")
+        print(f" Lỗi khi xuất PDF: {e}")
 
 if __name__ == "__main__":
     export_pdf()
