@@ -75,3 +75,16 @@ def get_places_by_destination(destination: str | None = None):
         places.append(normalized_place)
 
     return places
+def get_all_destinations():
+    collection = db["Places"]
+
+    destinations = collection.distinct("destination")
+
+    return sorted(
+        {
+            str(destination).strip()
+            for destination in destinations
+            if destination and str(destination).strip()
+        },
+        key=str.casefold
+    )

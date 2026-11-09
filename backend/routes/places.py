@@ -1,10 +1,17 @@
+
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 from services.place_recommendation import recommend_places
-from services.place_data import get_places_by_destination
+from services.place_data import (
+    get_places_by_destination,
+    get_all_destinations
+)
 
-router = APIRouter(prefix="/api/places", tags=["Places"])
+router = APIRouter(
+    prefix="/api/places",
+    tags=["Places"]
+)
 
 
 class RecommendRequest(BaseModel):
@@ -13,7 +20,28 @@ class RecommendRequest(BaseModel):
     top_k: int = Field(default=10, ge=1, le=50)
 
 
-# API lấy danh sách địa điểm từ MongoDB
+# API lấy danh sách tỉnh/thành
+@router.get("/destinations")
+def get_destinations():
+    try:
+        destinations = get_all_destinations()
+
+        return {
+            "success": True,
+            "total": len(destinations),
+            "data": destinations
+        }
+
+    except Exception as error:
+        print(f"Destination API error: {error}")
+
+        raise HTTPException(
+            status_code=500,
+            detail="Không thể lấy danh sách tỉnh/thành"
+        )
+
+
+# API lấy danh sách địa điểm theo tỉnh/thành
 @router.get("/")
 def get_places(destination: str):
     try:
@@ -25,7 +53,9 @@ def get_places(destination: str):
             "data": places
         }
 
-    except Exception:
+    except Exception as error:
+        print(f"Get places error: {error}")
+
         raise HTTPException(
             status_code=500,
             detail="Không thể lấy dữ liệu địa điểm từ MongoDB"
@@ -37,9 +67,11 @@ def get_places(destination: str):
 def recommend(request: RecommendRequest):
     try:
         # 1. Lấy dữ liệu từ MongoDB
-        places = get_places_by_destination(request.destination)
+        places = get_places_by_destination(
+            request.destination
+        )
 
-        # 2. Đưa dữ liệu vào thuật toán gợi ý
+        # 2. Chạy thuật toán gợi ý
         results = recommend_places(
             destination=request.destination,
             interests=request.interests,
@@ -60,7 +92,9 @@ def recommend(request: RecommendRequest):
             detail=str(error)
         )
 
-    except Exception:
+    except Exception as error:
+        print(f"Recommendation API error: {error}")
+
         raise HTTPException(
             status_code=500,
             detail="Lỗi khi xử lý yêu cầu gợi ý địa điểm"

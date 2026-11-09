@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from routes.places import router as places_router
 
