@@ -1,16 +1,19 @@
 DEFAULT_TAG_WEIGHT= 1.0
 MODE_TAG_WEIGHT = {
     "solo": {
-        "khám phá": 2.0,
+        "leo núi & trekking": 2.0,
         "thiên nhiên": 1.5,
+        "núi rừng": 1.5,
     },
     "couple": {
-        "lãng mạn": 2.0,
+        "ngắm hoàng hôn & bình minh": 2.0,
         "nghỉ dưỡng": 1.5,
+        "cà phê & trà": 1.5,
     },
     "family": {
-        "gia đình": 2.0,
+        "vui chơi giải trí": 2.0,
         "nghỉ dưỡng": 1.5,
+        "văn hóa - lịch sử": 1.5,
     },
     "random": {},
 }
