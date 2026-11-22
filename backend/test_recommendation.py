@@ -1,7 +1,7 @@
 
 import unittest
 
-from services.place_recommendation import recommend_places
+from backend.services.place_recommendation import recommend_places
 
 
 # Dataset giả lập để kiểm thử

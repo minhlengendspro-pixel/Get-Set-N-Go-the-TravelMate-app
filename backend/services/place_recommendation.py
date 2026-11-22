@@ -1,13 +1,20 @@
 
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+
+from backend.config.mode_config import (
+    get_tag_weight,
+    MODE_TAG_WEIGHT
+)
 
 
 def recommend_places(
     destination: str,
     interests: list,
     places: list,
-    top_k: int = 10
+    top_k: int = 10,
+    mode: str = "random"
 ):
     # 1. Validate input
     if not isinstance(destination, str) or not destination.strip():
@@ -20,14 +27,23 @@ def recommend_places(
         raise ValueError("Please select at least one interest")
 
     if isinstance(top_k, bool) or not isinstance(top_k, int) or top_k < 1:
-       raise ValueError("top_k must be a positive integer")
+        raise ValueError("top_k must be a positive integer")
+
+    if mode not in MODE_TAG_WEIGHT:
+        raise ValueError("Mode không hợp lệ: " + str(mode))
 
     # 2. Normalize user interests
     user_tags = list(dict.fromkeys(
-    str(tag).strip().casefold()
-    for tag in interests
-    if tag is not None and str(tag).strip()
-))
+        str(tag).strip().casefold()
+        for tag in interests
+        if tag is not None and str(tag).strip()
+    ))
+
+    # 2.1. Add mode-specific preferences
+    mode_tags = list(MODE_TAG_WEIGHT[mode].keys())
+
+# Combine user interests and mode preferences
+    profile_tags = list(dict.fromkeys(user_tags + mode_tags))
 
     # 3. Filter by destination and non-empty tags
     candidates = []
@@ -35,10 +51,10 @@ def recommend_places(
     for place in places:
         if not isinstance(place, dict):
             continue
-    
+
         place_destination = str(
             place.get("destination", "")
-           ).strip().casefold()
+        ).strip().casefold()
 
         raw_tags = place.get("tags", [])
 
@@ -66,18 +82,30 @@ def recommend_places(
     place_tags = [tags for _, tags in candidates]
 
     mlb = MultiLabelBinarizer()
-    vectors = mlb.fit_transform([user_tags] + place_tags)
+    vectors = mlb.fit_transform([profile_tags] + place_tags)
 
     user_vector = vectors[0:1]
     place_vectors = vectors[1:]
 
-    # 5. Calculate cosine similarity
+    # 5. Build mode-specific feature weights
+    feature_weights = np.array([
+        get_tag_weight(mode, tag)
+        for tag in mlb.classes_
+    ], dtype=float)
+
+    # Multiply each feature by sqrt(weight)
+    sqrt_weights = np.sqrt(feature_weights)
+
+    weighted_user_vector = user_vector * sqrt_weights
+    weighted_place_vectors = place_vectors * sqrt_weights
+
+    # 6. Calculate weighted cosine similarity
     scores = cosine_similarity(
-        user_vector,
-        place_vectors
+        weighted_user_vector,
+        weighted_place_vectors
     )[0]
 
-    # 6. Build results
+    # 7. Build results
     results = []
 
     for (place, tags), score in zip(candidates, scores):
@@ -98,7 +126,7 @@ def recommend_places(
             "matched_tags": sorted(set(user_tags) & set(tags))
         })
 
-    # 7. Sort descending
+    # 8. Sort descending
     results.sort(
         key=lambda item: item["score"],
         reverse=True

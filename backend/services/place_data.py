@@ -1,6 +1,6 @@
 
 import re
-from database import db
+from backend.database import db
 
 
 def clean_rating(value):

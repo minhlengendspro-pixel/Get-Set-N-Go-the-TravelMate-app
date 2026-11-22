@@ -1,9 +1,10 @@
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
+from typing import Literal
 
-from services.place_recommendation import recommend_places
-from services.place_data import (
+from backend.services.place_recommendation import recommend_places
+from backend.services.place_data import (
     get_places_by_destination,
     get_all_destinations
 )
@@ -18,6 +19,7 @@ class RecommendRequest(BaseModel):
     destination: str = Field(min_length=1)
     interests: list[str] = Field(min_length=1)
     top_k: int = Field(default=10, ge=1, le=50)
+    mode: Literal["solo", "couple", "family", "random"] = "random"
 
 
 # API lấy danh sách tỉnh/thành
@@ -76,7 +78,8 @@ def recommend(request: RecommendRequest):
             destination=request.destination,
             interests=request.interests,
             places=places,
-            top_k=request.top_k
+            top_k=request.top_k,
+            mode=request.mode,
         )
 
         # 3. Trả kết quả cho frontend
