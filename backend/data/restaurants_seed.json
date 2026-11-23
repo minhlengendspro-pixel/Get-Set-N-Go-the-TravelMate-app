@@ -20070,7 +20070,9 @@
     "cross_contamination_risk": "medium",
     "source": "Cổng TT Du lịch Đà Nẵng / Michelin Bib Gourmand",
     "all_ingredients": [
+      "bánh tráng mè",
       "bông cải xanh",
+      "bột gạo tươi",
       "cà rốt",
       "cải ngọt",
       "gia vị truyền thống",
@@ -20078,12 +20080,16 @@
       "hành khô",
       "hạt sen",
       "kho quẹt nấm chay",
+      "nước dùng sườn",
       "nước mắm",
       "rau sống ăn kèm",
       "thịt heo",
       "tiêu",
       "trà hoa cúc",
-      "đường phèn"
+      "trứng cút",
+      "tôm sú tươi",
+      "đường phèn",
+      "đậu phộng rang"
     ],
     "menu_items": [
       {
@@ -20091,12 +20097,23 @@
         "dish_name": "Mì Quảng Đà Nẵng",
         "price": 52000,
         "ingredients": [
-          "gia vị truyền thống",
+          "bột gạo tươi",
+          "tôm sú tươi",
+          "thịt heo",
+          "trứng cút",
+          "đậu phộng rang",
+          "bánh tráng mè",
+          "nước dùng sườn",
           "hành hoa",
           "rau sống ăn kèm",
           "tiêu"
         ],
-        "allergens": [],
+        "allergens": [
+          "tôm",
+          "hải sản",
+          "đậu phộng",
+          "trứng"
+        ],
         "is_signature": true,
         "matched_allergens": [],
         "reason": null
