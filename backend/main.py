@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI
 
 # Import Router của TV4
@@ -5,8 +6,10 @@ from routes.random_challenge import router as random_challenge_router
 from routes.search_history import router as search_history_router
 from routes.scheduler import router as scheduler_router
 
-# Import Router Places từ code thành viên khác
+# Import Router từ module Places và Input
 from routes.places import router as places_router
+from routes.input import router as input_router
+
 
 app = FastAPI(title="TravelMate API")
 
@@ -29,3 +32,6 @@ app.include_router(scheduler_router)
 
 # Đăng ký API Places
 app.include_router(places_router)
+
+# Đăng ký API Input
+app.include_router(input_router)

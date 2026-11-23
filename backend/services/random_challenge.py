@@ -13,7 +13,7 @@ def normalize_tag(tag):
     return tag.strip().casefold()
 
 
-
+# 2. Lay danh sach tags hop le
 def get_available_tags(places):
     tag_counts = {}
     total_places = len(places)
@@ -21,7 +21,7 @@ def get_available_tags(places):
     if total_places == 0:
         return []
 
-    # Đếm số địa điểm có chứa từng tag
+    # Dem so dia diem co chua tung tag
     for place in places:
         unique_tags = set(
             normalize_tag(tag)
@@ -32,14 +32,14 @@ def get_available_tags(places):
         for tag in unique_tags:
             tag_counts[tag] = tag_counts.get(tag, 0) + 1
 
-    # Loại tag tên tỉnh/thành
+    # Loai tag ten tinh/thanh
     location_tags = {
         normalize_tag(place.get("destination", ""))
         for place in places
         if place.get("destination")
     }
 
-    # Ngưỡng tần suất thích ứng
+    # Nguong tan suat thich ung
     min_frequency = 2
 
     if total_places <= 10:
@@ -56,7 +56,6 @@ def get_available_tags(places):
     ]
 
     return sorted(available_tags)
-
 
 
 # 3. Chon ngau nhien tu 2 den 4 tags
@@ -167,7 +166,15 @@ def evaluate_tags(tags, places):
         ]
 
         if matched_tags:
+            # Sao chep toan bo thong tin dia diem
+            # Bao gom image_url, name, rating, coordinates...
             result = place.copy()
+
+            # Dam bao co truong image_url
+            result["image_url"] = (
+                place.get("image_url") or place.get("image")
+            )
+
             result["matched_tags"] = matched_tags
             result["match_count"] = len(matched_tags)
             result["match_ratio"] = (
@@ -263,7 +270,6 @@ def simulated_annealing(
     }
 
 
-
 # 7. Chay Random Challenge
 def run_random_challenge(places):
     # Lay danh sach tag hop le tu MongoDB
@@ -295,4 +301,3 @@ def run_random_challenge(places):
         "fitness": fitness,
         "places": matched_places[:5]
     }
-

@@ -16,6 +16,7 @@ st.set_page_config(
 
 API_BASE_URL = "http://127.0.0.1:8000"
 
+RECOMMEND_API = f"{API_BASE_URL}/api/places/recommend"
 RANDOM_API = f"{API_BASE_URL}/api/random-challenge/"
 HISTORY_API = f"{API_BASE_URL}/api/search-history/"
 DESTINATIONS_API = f"{API_BASE_URL}/api/places/destinations"
@@ -25,33 +26,45 @@ DESTINATIONS_API = f"{API_BASE_URL}/api/places/destinations"
 # 2. SESSION STATE
 # =====================================================
 
-if "is_submitted" not in st.session_state:
-    st.session_state.is_submitted = False
+default_states = {
+    "is_submitted": False,
+    "results": [],
+    "random_result": None,
+    "history": [],
+    "history_loaded": False,
+    "hobby": [],
+    "place": "Hà Nội",
+    "budget": 100000,
+    "duration": 1,
+    "mode": "solo"
+}
 
-if "random_result" not in st.session_state:
-    st.session_state.random_result = None
-
-if "history" not in st.session_state:
-    st.session_state.history = []
-
-if "history_loaded" not in st.session_state:
-    st.session_state.history_loaded = False
-
-if "hobby" not in st.session_state:
-    st.session_state.hobby = []
-
-if "place" not in st.session_state:
-    st.session_state.place = "Hà Nội"
-
-if "budget" not in st.session_state:
-    st.session_state.budget = 100000
-
-if "duration" not in st.session_state:
-    st.session_state.duration = 1
+for key, value in default_states.items():
+    if key not in st.session_state:
+        st.session_state[key] = value
 
 
 # =====================================================
-# 3. CSS GIAO DIỆN
+# 3. DỮ LIỆU GIAO DIỆN AI RECOMMENDATION
+# =====================================================
+
+HOBBY_TAGS = {
+    "Đi biển": "biển đảo",
+    "Leo núi": "leo núi & trekking",
+    "Tham quan địa điểm lịch sử": "kiến trúc & di tích cổ",
+    "Ngắm cảnh đẹp thiên nhiên": "thiên nhiên"
+}
+
+MODE_OPTIONS = {
+    "Đi du lịch một mình": "solo",
+    "Đi du lịch cùng người yêu": "couple",
+    "Đi du lịch cùng gia đình": "family",
+    "Để AI tự do lựa chọn": "random"
+}
+
+
+# =====================================================
+# 4. CSS GIAO DIỆN
 # =====================================================
 
 st.markdown(
@@ -113,10 +126,10 @@ st.markdown(
 
 
 # =====================================================
-# 4. BACKEND API FUNCTIONS
+# 5. BACKEND API FUNCTIONS
 # =====================================================
 
-# Lấy danh sách tỉnh/thành từ MongoDB thông qua Backend
+# Lấy danh sách tỉnh/thành từ MongoDB
 @st.cache_data(ttl=300)
 def get_destinations():
 
@@ -148,13 +161,36 @@ def get_destinations():
         )
 
     except requests.RequestException as error:
-        st.error(
-            f"Không thể tải danh sách tỉnh/thành: {error}"
-        )
         return []
 
 
-# Gọi API Random Challenge
+# AI Recommendation
+def get_recommendations(destination, interests, mode):
+
+    payload = {
+        "destination": destination,
+        "interests": interests,
+        "top_k": 10,
+        "mode": mode
+    }
+
+    try:
+        response = requests.post(
+            RECOMMEND_API,
+            json=payload,
+            timeout=30
+        )
+
+        response.raise_for_status()
+
+        return response.json()
+
+    except requests.RequestException as error:
+        st.error(f"Không thể kết nối API Recommendation: {error}")
+        return None
+
+
+# Random Challenge
 def run_random_challenge(destination):
 
     try:
@@ -241,7 +277,62 @@ def get_search_history():
 
 
 # =====================================================
-# 5. HIỂN THỊ ĐỊA ĐIỂM RANDOM
+# 6. HIỂN THỊ KẾT QUẢ AI RECOMMENDATION
+# =====================================================
+
+def display_recommendations(results):
+
+    st.subheader("Danh sách địa điểm gợi ý")
+
+    if not results:
+        st.warning(
+            "Không tìm thấy địa điểm phù hợp. "
+            "Bạn thử thay đổi sở thích nhé!"
+        )
+        return
+
+    for item in results:
+
+        with st.container(border=True):
+
+            st.subheader(
+                item.get("name", "Chưa có tên")
+            )
+
+            image_url = item.get("image_url")
+
+            if image_url:
+                st.image(
+                    image_url,
+                    width="stretch"
+                )
+            else:
+                st.caption("Chưa có hình ảnh địa điểm.")
+
+            rating = item.get("rating", 0)
+
+            st.write(f"⭐ Đánh giá: {rating}/5")
+
+            st.write(
+                item.get("description") or "Chưa có mô tả."
+            )
+
+            tags = item.get("tags", [])
+
+            st.write(
+                "🏷️ Sở thích phù hợp:",
+                ", ".join(tags) if tags else "Chưa có tags"
+            )
+
+            score = item.get("score", 0)
+
+            st.write(
+                f"🎯 Điểm phù hợp: {score * 100:.1f}%"
+            )
+
+
+# =====================================================
+# 7. HIỂN THỊ ĐỊA ĐIỂM RANDOM
 # =====================================================
 
 def display_random_places(places, destination):
@@ -278,7 +369,7 @@ def display_random_places(places, destination):
 
                     st.image(
                         image_url,
-                        use_container_width=True
+                        width="stretch"
                     )
 
                 else:
@@ -291,30 +382,20 @@ def display_random_places(places, destination):
                     f"### {index}. {name}"
                 )
 
-                # Rating
                 rating = item.get("rating")
 
                 if rating is not None:
+                    st.write(f"⭐ Rating: {rating}")
 
-                    st.write(
-                        f"⭐ Rating: {rating}"
-                    )
-
-                # Tags gốc của địa điểm
                 place_tags = item.get("tags", [])
 
                 st.write("**Tags của địa điểm:**")
 
                 if place_tags:
-
-                    st.write(
-                        ", ".join(place_tags)
-                    )
-
+                    st.write(", ".join(place_tags))
                 else:
                     st.write("Không có thông tin tags.")
 
-                # Tags trùng khớp
                 matched_tags = item.get(
                     "matched_tags",
                     []
@@ -323,18 +404,10 @@ def display_random_places(places, destination):
                 st.write("**Tags khớp với thử thách:**")
 
                 if matched_tags:
-
-                    st.success(
-                        ", ".join(matched_tags)
-                    )
-
+                    st.success(", ".join(matched_tags))
                 else:
+                    st.write("Không có thông tin tags khớp.")
 
-                    st.write(
-                        "Không có thông tin tags khớp."
-                    )
-
-                # Số tags khớp
                 match_count = item.get(
                     "match_count",
                     len(matched_tags)
@@ -344,11 +417,9 @@ def display_random_places(places, destination):
                     f"**Số tags khớp:** {match_count}"
                 )
 
-                # Tỷ lệ khớp
                 match_ratio = item.get("match_ratio")
 
                 if match_ratio is not None:
-
                     st.write(
                         f"**Tỷ lệ khớp:** {match_ratio}"
                     )
@@ -369,7 +440,7 @@ def display_random_places(places, destination):
 
 
 # =====================================================
-# 6. HIỂN THỊ TOÀN BỘ KẾT QUẢ RANDOM CHALLENGE
+# 8. HIỂN THỊ TOÀN BỘ KẾT QUẢ RANDOM CHALLENGE
 # =====================================================
 
 def display_random_result(result):
@@ -389,7 +460,7 @@ def display_random_result(result):
 
     destination = result.get(
         "destination",
-        st.session_state.get("place", "")
+        st.session_state.get("random_destination", "")
     )
 
     tags = data.get("tags", [])
@@ -403,9 +474,7 @@ def display_random_result(result):
         unsafe_allow_html=True
     )
 
-    st.write(
-        f"**Điểm đến:** {destination}"
-    )
+    st.write(f"**Điểm đến:** {destination}")
 
     # Tags được thuật toán lựa chọn
     st.subheader("🎯 Tags ngẫu nhiên được lựa chọn")
@@ -417,24 +486,14 @@ def display_random_result(result):
         for index, tag in enumerate(tags):
 
             with tag_columns[index]:
-
-                st.info(
-                    f"🏷️ {tag}"
-                )
+                st.info(f"🏷️ {tag}")
 
     else:
-
-        st.warning(
-            "Backend chưa trả về tags."
-        )
+        st.warning("Backend chưa trả về tags.")
 
     # Fitness
     if fitness is not None:
-
-        st.metric(
-            "Fitness",
-            fitness
-        )
+        st.metric("Fitness", fitness)
 
     st.divider()
 
@@ -450,17 +509,26 @@ def display_random_result(result):
 
 
 # =====================================================
-# 7. TẢI DANH SÁCH ĐIỂM ĐẾN
+# 9. TẢI DANH SÁCH ĐIỂM ĐẾN
 # =====================================================
 
 destinations = get_destinations()
 
-# Thêm lựa chọn toàn quốc
+# Danh sách cho AI Recommendation
+# Không thêm "Toàn Việt Nam" vào đây vì chưa xác nhận
+# API Recommendation hỗ trợ lựa chọn này.
+recommendation_destinations = destinations or [
+    "Hà Nội",
+    "Đà Nẵng",
+    "Thành phố Hồ Chí Minh"
+]
+
+# Danh sách cho Random Challenge
 destination_options = ["Toàn Việt Nam"] + destinations
 
 
 # =====================================================
-# 8. HEADER VÀ CÁC TAB
+# 10. HEADER VÀ CÁC TAB
 # =====================================================
 
 st.markdown(
@@ -484,49 +552,38 @@ tab_home, tab_random, tab_schedule, tab_history = st.tabs(
 
 
 # =====================================================
-# 9. TAB TRANG CHỦ
+# 11. TAB TRANG CHỦ - AI RECOMMENDATION
 # =====================================================
 
 with tab_home:
 
     with st.sidebar:
 
-        st.header(
-            "Đặc điểm cá nhân nổi bật"
+        st.header("Đặc điểm cá nhân nổi bật")
+
+        selected_mode = st.selectbox(
+            "Bạn đi du lịch với ai?",
+            options=list(MODE_OPTIONS.keys())
         )
+
+        mode = MODE_OPTIONS[selected_mode]
 
         hobby = st.multiselect(
             "Sở thích",
-            [
-                "Đi biển",
-                "Leo núi",
-                "Tham quan địa điểm lịch sử",
-                "Ngắm cảnh đẹp thiên nhiên"
-            ],
+            list(HOBBY_TAGS.keys()),
             default=st.session_state.hobby
         )
 
-        # Chọn điểm đến động từ MongoDB
-        if destination_options:
+        default_place = st.session_state.place
 
-            default_place = st.session_state.place
+        if default_place not in recommendation_destinations:
+            default_place = recommendation_destinations[0]
 
-            if default_place not in destination_options:
-                default_place = destination_options[0]
-
-            place = st.selectbox(
-                "Thành phố dự kiến muốn đi",
-                destination_options,
-                index=destination_options.index(default_place)
-            )
-
-        else:
-
-            st.warning(
-                "Chưa tải được danh sách tỉnh/thành."
-            )
-
-            place = st.session_state.place
+        place = st.selectbox(
+            "Thành phố dự kiến muốn đi",
+            recommendation_destinations,
+            index=recommendation_destinations.index(default_place)
+        )
 
         budget = st.number_input(
             "Ngân sách dự kiến (VNĐ)",
@@ -544,70 +601,92 @@ with tab_home:
             step=1
         )
 
-        if st.button(
+        submit = st.button(
             "Tạo lịch trình AI",
             type="primary"
-        ):
+        )
 
-            st.session_state.is_submitted = True
+    # Xử lý khi người dùng nhấn nút
+    if submit:
 
-            st.session_state.hobby = hobby
+        if not hobby:
 
-            st.session_state.place = place
+            st.warning(
+                "Bạn hãy chọn ít nhất một sở thích nhé!"
+            )
 
-            st.session_state.budget = budget
+        else:
 
-            st.session_state.duration = duration
+            interests = [
+                HOBBY_TAGS[item]
+                for item in hobby
+            ]
 
-    # Nội dung trang chủ
+            with st.spinner(
+                "TravelMate đang tìm địa điểm phù hợp..."
+            ):
+
+                data = get_recommendations(
+                    place,
+                    interests,
+                    mode
+                )
+
+            if data is not None:
+
+                st.session_state.results = data.get(
+                    "data",
+                    []
+                )
+
+                st.session_state.is_submitted = True
+
+                st.session_state.mode = mode
+                st.session_state.place = place
+                st.session_state.budget = budget
+                st.session_state.duration = duration
+                st.session_state.hobby = hobby
+
+    # Hiển thị kết quả
     if not st.session_state.is_submitted:
 
         st.info(
             "Chào mừng bạn đến với TravelMate AI! "
-            "Vui lòng điền đầy đủ thông tin bên thanh sidebar "
-            "để được cung cấp lịch trình gợi ý!"
+            "Vui lòng điền thông tin bên thanh sidebar "
+            "để nhận gợi ý."
         )
 
     else:
+
+        st.write(
+            "**Chế độ du lịch:**",
+            st.session_state.mode
+        )
 
         col_card, col_map = st.columns([1, 1])
 
         with col_map:
 
-            st.subheader(
-                "Bản đồ gợi ý"
-            )
+            st.subheader("Bản đồ gợi ý")
 
             st.info(
-                "Bản đồ sẽ được bổ sung khi hoàn thiện phần "
-                "hiển thị dữ liệu địa điểm."
+                "Bản đồ sẽ được tích hợp ở bước tiếp theo."
             )
 
         with col_card:
 
-            st.subheader(
-                "Danh sách địa điểm gợi ý"
-            )
-
-            # Giữ lại phần hiển thị mẫu từ code gốc
-            st.checkbox(
-                "Lăng Bác (Hà Nội)"
-            )
-
-            st.checkbox(
-                "Phố cổ (Hà Nội)"
+            display_recommendations(
+                st.session_state.results
             )
 
 
 # =====================================================
-# 10. TAB RANDOM CHALLENGE
+# 12. TAB RANDOM CHALLENGE - TV4
 # =====================================================
 
 with tab_random:
 
-    st.title(
-        "🎲 Random Challenge"
-    )
+    st.title("🎲 Random Challenge")
 
     st.write(
         "Để TravelMate AI lựa chọn ngẫu nhiên "
@@ -616,7 +695,6 @@ with tab_random:
 
     st.divider()
 
-    # Chọn Destination từ MongoDB
     if destination_options:
 
         random_destination = st.selectbox(
@@ -638,7 +716,6 @@ with tab_random:
             unsafe_allow_html=True
         )
 
-        # Nút bắt đầu Random
         if st.button(
             "🎲 BẮT ĐẦU RANDOM",
             type="primary",
@@ -649,7 +726,6 @@ with tab_random:
 
             wheel_placeholder = st.empty()
 
-            # Hiệu ứng vòng quay
             wheel_placeholder.markdown(
                 """
                 <div class="random-wheel spinning">
@@ -686,7 +762,8 @@ with tab_random:
                 if not saved:
 
                     st.warning(
-                        "Kết quả đã được tạo nhưng chưa lưu được lịch sử."
+                        "Kết quả đã được tạo nhưng "
+                        "chưa lưu được lịch sử."
                     )
 
             elif result:
@@ -714,18 +791,17 @@ with tab_random:
 
 
 # =====================================================
-# 11. TAB LỊCH TRÌNH
+# 13. TAB LỊCH TRÌNH
 # =====================================================
 
 with tab_schedule:
 
-    st.subheader(
-        "Quản lý lịch trình chi tiết"
-    )
+    st.subheader("Quản lý lịch trình chi tiết")
 
     st.info(
         "Khu vực này sẽ hiển thị lịch trình nhiều ngày "
-        "sau khi hoàn thiện kết nối API Scheduler với dữ liệu TV1, TV2 và TV3."
+        "sau khi hoàn thiện kết nối API Scheduler "
+        "với dữ liệu TV1, TV2 và TV3."
     )
 
     if st.session_state.is_submitted:
@@ -739,24 +815,28 @@ with tab_schedule:
         )
 
         st.write(
+            f"**Ngân sách:** {st.session_state.budget:,} VNĐ"
+        )
+
+        st.write(
+            f"**Chế độ du lịch:** {st.session_state.mode}"
+        )
+
+        st.write(
             f"**Sở thích:** "
             f"{', '.join(st.session_state.hobby)}"
         )
 
 
 # =====================================================
-# 12. TAB LỊCH SỬ
+# 14. TAB LỊCH SỬ
 # =====================================================
 
 with tab_history:
 
-    st.subheader(
-        "Lịch sử chuyến đi"
-    )
+    st.subheader("Lịch sử chuyến đi")
 
-    if st.button(
-        "🔄 Tải lịch sử tìm kiếm"
-    ):
+    if st.button("🔄 Tải lịch sử tìm kiếm"):
 
         st.session_state.history = get_search_history()
 
@@ -796,6 +876,4 @@ with tab_history:
 
     else:
 
-        st.info(
-            "Chưa có lịch sử tìm kiếm."
-        )
+        st.info("Chưa có lịch sử tìm kiếm.")

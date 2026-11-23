@@ -1,28 +1,25 @@
-
 import os
 from pathlib import Path
 
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
-# Đọc file .env
+
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
 
-# Lấy cấu hình từ .env
 MONGO_URI = os.getenv("MONGO_URI")
 DATABASE_NAME = os.getenv("DATABASE_NAME", "get_set_n_go_db")
 
 if not MONGO_URI:
-    raise ValueError("Khong tim thay MONGO_URI trong file .env")
+    raise ValueError("Không tìm thấy MONGO_URI trong backend/.env")
 
-# Tạo kết nối MongoDB
+
 client = MongoClient(
     MONGO_URI,
     serverSelectionTimeoutMS=5000
 )
 
-# Chọn database
 db = client[DATABASE_NAME]
 
 
@@ -33,5 +30,5 @@ def check_connection():
         return True
 
     except Exception as error:
-        print("MongoDB connection failed:", error)
+        print(f"MongoDB connection failed: {error}")
         return False
