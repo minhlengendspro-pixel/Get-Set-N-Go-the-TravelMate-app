@@ -4,7 +4,7 @@ import services.api_client
 import services.places_service
 importlib.reload(services.api_client)
 importlib.reload(services.places_service)
-from services.api_client import fetch_safe_restaurants, check_backend_connection
+from services.api_client import fetch_safe_restaurants, fetch_recommended_places, check_backend_connection
 from services.places_service import get_featured_places
 
 # ==============================================================================
@@ -37,6 +37,8 @@ if "selected_itinerary_places" not in st.session_state:
     st.session_state.selected_itinerary_places = []
 if "selected_dining_places" not in st.session_state:
     st.session_state.selected_dining_places = []
+if "recommended_places" not in st.session_state:
+    st.session_state.recommended_places = []
 
 # ==============================================================================
 # 2. INJECT CSS TÙY BIẾN THEO BẢN MẪU ATLAS TRAVEL GUIDE (KHÔNG ICON)
@@ -514,6 +516,19 @@ with st.sidebar:
             index=0
         )
 
+        mode_options = {
+            "Đi cùng gia đình": "family",
+            "Đi cùng người yêu": "couple",
+            "Đi du lịch một mình": "solo",
+            "Để AI tự do lựa chọn": "random"
+        }
+        selected_mode_label = st.selectbox(
+            "Bạn đi du lịch với ai? (Chế độ Người 1)",
+            options=list(mode_options.keys()),
+            index=0
+        )
+        travel_mode = mode_options[selected_mode_label]
+
         hobbies = st.multiselect(
             "Phong cách & Sở thích chuyến đi",
             ["Thiên nhiên", "Lịch sử & Văn hóa", "Ẩm thực địa phương", "Nghỉ dưỡng & Thư giãn", "Phiêu lưu mạo hiểm", "Check-in ngắm cảnh"],
@@ -584,6 +599,8 @@ with st.sidebar:
         st.session_state.group_size = group_size
         st.session_state.duration = duration
         st.session_state.total_budget = total_budget
+        st.session_state.travel_mode = selected_mode_label
+        st.session_state.mode_code = travel_mode
 
         # Kiểm tra kết nối Backend và gọi API
         if not check_backend_connection():
@@ -592,6 +609,7 @@ with st.sidebar:
                 "Vui lòng chạy lệnh: cd backend; uvicorn main:app --reload"
             )
             st.session_state.safe_dining_data = None
+            st.session_state.recommended_places = []
         else:
             st.session_state.api_error = None
             with st.spinner("Hệ thống đang kết nối cơ sở dữ liệu và đánh giá rủi ro y tế..."):
@@ -606,6 +624,27 @@ with st.sidebar:
                 else:
                     st.session_state.api_error = res["error"]
                     st.session_state.safe_dining_data = None
+
+                # Gọi API gợi ý điểm đến thông minh từ Người 3 (Cosine / TF-IDF)
+                tag_mapping = {
+                    "Thiên nhiên": "thiên nhiên",
+                    "Lịch sử & Văn hóa": "kiến trúc & di tích cổ",
+                    "Ẩm thực địa phương": "ẩm thực bản địa",
+                    "Nghỉ dưỡng & Thư giãn": "nghỉ dưỡng",
+                    "Phiêu lưu mạo hiểm": "leo núi & trekking",
+                    "Check-in ngắm cảnh": "ngắm cảnh"
+                }
+                parsed_interests = [tag_mapping.get(h, h.lower()) for h in hobbies]
+                rec_places_res = fetch_recommended_places(
+                    destination=place,
+                    interests=parsed_interests,
+                    mode=travel_mode,
+                    top_k=6
+                )
+                if rec_places_res.get("success") and rec_places_res.get("data"):
+                    st.session_state.recommended_places = rec_places_res["data"]
+                else:
+                    st.session_state.recommended_places = []
 
 
 # ==============================================================================
@@ -898,8 +937,21 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-# Lấy danh sách địa điểm thực tế từ tập 315 POIs đã làm giàu qua places_service
-featured_places = get_featured_places(st.session_state.destination, limit=3)
+# Điểm khớp nối Người 3: Ưu tiên danh sách địa điểm do AI gợi ý (nếu có), fallback về tập 315 POIs
+if st.session_state.recommended_places:
+    raw_recs = st.session_state.recommended_places[:3]
+    featured_places = []
+    from services.places_service import get_place_image
+    for r in raw_recs:
+        p_item = dict(r)
+        p_name = p_item.get("name", "")
+        p_dest = p_item.get("destination", st.session_state.destination)
+        img_src, data_uri = get_place_image(p_name, p_dest)
+        p_item["image_data_uri"] = data_uri
+        p_item["image"] = img_src
+        featured_places.append(p_item)
+else:
+    featured_places = get_featured_places(st.session_state.destination, limit=3)
 
 if not featured_places:
     st.info(f"Đang đồng bộ dữ liệu điểm tham quan cho khu vực {st.session_state.destination}...")
@@ -914,6 +966,8 @@ else:
             p_tags = p.get("tags") or p.get("original_tags", [])
             p_img = p.get("image_data_uri") or p.get("image", "")
             tag_display = p_tags[1] if len(p_tags) > 1 else (p_tags[0] if p_tags else "Tham quan")
+            score_val = p.get("score")
+            score_html = f'<span class="pill-item" style="font-size: 0.72rem; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; font-weight: 700;">ĐIỂM AI: {score_val*100:.1f}%</span>' if score_val is not None else ''
 
             # Ảnh thumbnail xem trước sắc nét trên thẻ Card (khớp bản mẫu Atlas)
             img_html = f'<div style="height: 180px; overflow: hidden; border-radius: 12px; margin-bottom: 12px; background: #e2e8f0;"><img src="{p_img}" style="width: 100%; height: 100%; object-fit: cover;" /></div>' if p_img else ''
@@ -925,8 +979,9 @@ else:
                     <div class="place-card-category">{p_dest.upper()} • ĐÁNH GIÁ: {p_rating}</div>
                     <div class="place-card-title">{p_name}</div>
                     <div class="place-card-desc">{p_desc[:110]}...</div>
-                    <div style="margin-bottom: 14px;">
+                    <div style="margin-bottom: 14px; display: flex; gap: 6px; flex-wrap: wrap;">
                         <span class="pill-item" style="font-size: 0.72rem;">{tag_display}</span>
+                        {score_html}
                     </div>
                 </div>
             </div>

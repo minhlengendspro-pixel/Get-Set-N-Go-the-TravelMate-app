@@ -90,6 +90,49 @@ def fetch_safe_restaurants(
         }
 
 
+def fetch_recommended_places(
+    destination: str,
+    interests: list,
+    mode: str = "random",
+    top_k: int = 6,
+    timeout: int = 15
+) -> Dict[str, Any]:
+    """
+    Gui yeu cau goi y diem den tham quan (Nhiem vu Nguoi 3) sang Backend:
+    POST /api/places/recommend
+    """
+    endpoint = f"{BACKEND_BASE_URL}/api/places/recommend"
+    payload = {
+        "destination": destination.strip(),
+        "interests": interests or ["thiên nhiên"],
+        "top_k": top_k,
+        "mode": mode
+    }
+
+    try:
+        response = requests.post(endpoint, json=payload, timeout=timeout)
+        if response.status_code == 200:
+            res_json = response.json()
+            data = res_json.get("data", [])
+            return {
+                "success": True,
+                "data": data,
+                "error": None
+            }
+        else:
+            return {
+                "success": False,
+                "data": [],
+                "error": f"Loi tu Backend (HTTP {response.status_code}): {response.text}"
+            }
+    except Exception as e:
+        return {
+            "success": False,
+            "data": [],
+            "error": f"Loi ket noi: {str(e)}"
+        }
+
+
 if __name__ == "__main__":
     print("--- DANG THU NGHIEM MODULE API_CLIENT DOC LAP ---")
     
