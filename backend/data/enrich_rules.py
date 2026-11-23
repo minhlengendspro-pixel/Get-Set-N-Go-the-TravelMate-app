@@ -208,8 +208,8 @@ def run():
         json.dump(enriched_places, f, ensure_ascii=False, indent=2)
 
     print("==================================================================")
-    print(f"✅ THÀNH CÔNG RỰC RỠ! Đã chuẩn hóa toàn bộ {total} địa điểm.")
-    print(f"📁 Kết quả lưu tại: backend/data/places_enriched.json")
+    print(f" THÀNH CÔNG RỰC RỠ! Đã chuẩn hóa toàn bộ {total} địa điểm.")
+    print(f" Kết quả lưu tại: backend/data/places_enriched.json")
     print("==================================================================")
 
 

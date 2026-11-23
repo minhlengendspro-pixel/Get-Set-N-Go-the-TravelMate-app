@@ -27,7 +27,7 @@ def import_enriched_places():
 
     # 1. Kiểm tra sự tồn tại của file dữ liệu
     if not os.path.exists(ENRICHED_JSON_PATH):
-        print(f"❌ LỖI: Không tìm thấy file {ENRICHED_JSON_PATH}")
+        print(f" LỖI: Không tìm thấy file {ENRICHED_JSON_PATH}")
         print("Hãy đảm bảo bạn đã chạy file sample3_enrich_rules.py trước đó.")
         return
 
@@ -76,11 +76,11 @@ def import_enriched_places():
 
         client.close()
         print("\n==================================================================")
-        print("✅ HOÀN TẤT CHẶNG 1 XUẤT SẮC! CƠ SỞ DỮ LIỆU ĐÃ SẴN SÀNG.")
+        print(" HOÀN TẤT CHẶNG 1 XUẤT SẮC! CƠ SỞ DỮ LIỆU ĐÃ SẴN SÀNG.")
         print("==================================================================")
 
     except Exception as e:
-        print(f"❌ Đã xảy ra lỗi kết nối MongoDB: {e}")
+        print(f" Đã xảy ra lỗi kết nối MongoDB: {e}")
 
 
 if __name__ == "__main__":

@@ -56,3 +56,73 @@ class FoodSchema(BaseModel):
             return min(float(clean_str), 5.0)
         except ValueError:
             return 0.0
+
+
+# ==============================================================================
+# MODULE 2: SCHEMAS DÀNH CHO BỘ LỌC RÀNG BUỘC & CẮT TỈA AN TOÀN (HARD PRUNING)
+# ==============================================================================
+
+class MenuItemSchema(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
+    dish_id: str = Field(..., description="Mã món ăn (ví dụ: D001)")
+    dish_name: str = Field(..., description="Tên món ăn")
+    price: int = Field(default=0, ge=0, description="Đơn giá món ăn (VNĐ)")
+    ingredients: List[str] = Field(default_factory=list, description="Mảng thành phần nguyên liệu")
+    allergens: List[str] = Field(default_factory=list, description="Mảng các tác nhân dị ứng chính")
+    is_signature: bool = Field(default=False, description="Đánh dấu món đặc sản nổi bật")
+    matched_allergens: List[str] = Field(default_factory=list, description="Danh sách các chất gây dị ứng phát hiện được cho món này")
+    reason: Optional[str] = Field(default=None, description="Lý do chi tiết cảnh báo dị ứng hoặc an toàn")
+
+
+class PriceRangeSchema(BaseModel):
+    min: int = Field(default=0, ge=0)
+    max: int = Field(default=0, ge=0)
+
+
+class RestaurantSchema(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
+    id: str = Field(..., description="Mã định danh nhà hàng (ví dụ: R001)")
+    name: str = Field(..., description="Tên nhà hàng/quán ăn")
+    destination: str = Field(..., description="Tỉnh/thành phố liên kết với Places")
+    address: Optional[str] = Field(default="", description="Địa chỉ cụ thể")
+    rating: float = Field(default=0.0, ge=0.0, le=5.0)
+    avg_cost_per_person: int = Field(default=0, ge=0, description="Chi phí ăn uống bình quân 1 người (VNĐ)")
+    price_range: Optional[PriceRangeSchema] = None
+    specialties: List[str] = Field(default_factory=list, description="Danh sách món đặc sắc")
+    cross_contamination_risk: str = Field(default="low", description="Mức nguy cơ lây nhiễm chéo: low | medium | high")
+    source: Optional[str] = Field(default="", description="Nguồn dữ liệu thực tế xác thực")
+    all_ingredients: List[str] = Field(default_factory=list, description="Tổng hợp nguyên liệu có trong quán")
+    menu_items: List[MenuItemSchema] = Field(default_factory=list, description="Danh sách các món ăn trong thực đơn")
+
+
+class SafetyPruneRequest(BaseModel):
+    destination: str = Field(..., description="Tên tỉnh hoặc thành phố cần tìm", json_schema_extra={"example": "Hà Nội"})
+    group_allergens: List[str] = Field(default_factory=list, description="Danh sách chất dị ứng của đoàn", json_schema_extra={"example": ["hải sản", "đậu phộng"]})
+    max_budget_per_person: Optional[int] = Field(default=None, description="Trần ngân sách ăn uống tối đa cho 1 người / bữa (VNĐ)", json_schema_extra={"example": 120000})
+    group_size: int = Field(default=1, ge=1, le=50, description="Số lượng thành viên trong đoàn")
+
+
+class EvaluatedRestaurant(BaseModel):
+    id: str
+    name: str
+    destination: str
+    address: Optional[str] = ""
+    rating: float = 0.0
+    avg_cost_per_person: int
+    source: Optional[str] = Field(default="", description="Nguồn dữ liệu xác thực thực tế")
+    is_safe: bool = Field(default=True, description="Đạt chuẩn an toàn (có ít nhất 1 món an toàn và hợp ngân sách)")
+    is_100_percent_safe: bool = Field(default=False, description="Toàn bộ thực đơn 100% không chứa chất dị ứng")
+    safe_dishes: List[MenuItemSchema] = Field(default_factory=list, description="Danh sách món an toàn đề xuất cho người dị ứng")
+    unsafe_dishes: List[MenuItemSchema] = Field(default_factory=list, description="Danh sách món chứa dị ứng cần tránh")
+    warning_note: Optional[str] = None
+
+
+class SafetyPruneResponse(BaseModel):
+    destination: str
+    total_candidates: int
+    passed_count: int
+    pruned_overbudget_count: int
+    pruned_unsafe_count: int
+    safe_restaurants: List[EvaluatedRestaurant]
