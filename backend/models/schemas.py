@@ -1,27 +1,63 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict, field_validator
 from typing import Optional
+
+
 class PlaceSchema(BaseModel):
-    id: Optional[str] = Field(default=None, alias="_id")# có thể trống, mongo có thể tự tạo khi thêm dữ liệu mới
+    model_config = ConfigDict(populate_by_name=True)
+
+    id: Optional[str] = Field(default=None, alias="_id")
     name: str
     destination: str
-    description: Optional[str] = None #có thể có or ko nếu kco dữ liệu
+    description: Optional[str] = None
     category: str
     rating: float = 0.0
     image_url: Optional[str] = None
-    tags: list[str] = []
-    
-    class Config:
-        populate_by_name = True #linh hoạt khi truyền dữ liệu bằng id hoặc _id, tránh phải luôn sử dụng đúng tên alias khi tạo đối tượng.
+    tags: list[str] = Field(default_factory=list)
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+
+    @field_validator("rating", mode="before")
+    @classmethod
+    def parse_rating(cls, v):
+        if v is None or str(v).strip().lower() in ("", "not a number", "nan"):
+            return 0.0
+
+        if isinstance(v, (int, float)):
+            return float(v)
+
+        clean_str = str(v).split("/")[0].replace(",", ".").strip()
+
+        try:
+            return float(clean_str)
+        except ValueError:
+            return 0.0
+
 
 class FoodSchema(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
     id: Optional[str] = Field(default=None, alias="_id")
     name: str
     category: str
-    price: int #đơn vị vnd nên chỉ cần int
-    destination: str # địa chỉ hoặc khu vực
+    price: int
+    destination: str
     rating: float = 0.0
     description: Optional[str] = None
     image_url: Optional[str] = None
-    tags: list[str] = Field(default_factory=list)# tự tạo ra 1 danh sách trống mới khi tạo 1 đối tg mà kco truyền tags    
-    class Config:
-        populate_by_name= True
+    tags: list[str] = Field(default_factory=list)
+
+    @field_validator("rating", mode="before")
+    @classmethod
+    def parse_rating(cls, v):
+        if v is None or str(v).strip().lower() in ("", "not a number", "nan"):
+            return 0.0
+
+        if isinstance(v, (int, float)):
+            return float(v)
+
+        clean_str = str(v).split("/")[0].replace(",", ".").strip()
+
+        try:
+            return float(clean_str)
+        except ValueError:
+            return 0.0
