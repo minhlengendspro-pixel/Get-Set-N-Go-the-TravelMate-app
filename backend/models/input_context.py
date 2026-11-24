@@ -21,6 +21,7 @@ class InputContextResponse(BaseModel):
     destination: str
     mode: Literal["solo","couple","family","random"]
     tags: list[str] = Field(default_factory=list)
+    tag_weights: dict[str, float]
     budget: int | None = Field(default=None, ge=0)
     duration: int = Field(..., ge=1, le=30)
     allergies: list[str] = Field(default_factory=list)
