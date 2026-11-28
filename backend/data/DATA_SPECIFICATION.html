@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tài Liệu Bàn Giao Dữ Liệu - TravelMate</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      border-bottom: 3px solid #0969da;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    h1 {
+      color: #0969da;
+      font-size: 24pt;
+      margin: 0 0 8px 0;
+    }
+    .meta-box {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 25px;
+      font-size: 10pt;
+    }
+    .meta-item {
+      margin-bottom: 4px;
+    }
+    .meta-item strong {
+      color: #1f2328;
+      display: inline-block;
+      width: 170px;
+    }
+    h2 {
+      color: #1f2328;
+      font-size: 15pt;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 6px;
+      margin-top: 30px;
+    }
+    h3 {
+      color: #0969da;
+      font-size: 12pt;
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 9.5pt;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f6f8fa;
+      color: #1f2328;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+    pre {
+      background-color: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Cascadia Code', Consolas, Monaco, monospace;
+      font-size: 9pt;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    code {
+      font-family: 'Cascadia Code', Consolas, Monaco, monospace;
+      background-color: rgba(175,184,193,0.2);
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 9pt;
+    }
+    .tag-badge {
+      display: inline-block;
+      background-color: #ddf4ff;
+      color: #0969da;
+      border: 1px solid #54aeff;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 8.5pt;
+      margin: 2px 3px 2px 0;
+    }
+    .tag-group {
+      margin-bottom: 12px;
+    }
+    .tag-group strong {
+      display: inline-block;
+      width: 180px;
+      color: #1f2328;
+    }
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid #d0d7de;
+      padding-top: 10px;
+      font-size: 8.5pt;
+      color: #656d76;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>📘 TÀI LIỆU BÀN GIAO DỮ LIỆU & ĐẶC TẢ SCHEMA</h1>
+    <div style="font-size: 11pt; color: #656d76;">Get-Set-N-Go (TravelMate App) • Data Engineering Deliverable</div>
+  </div>
+
+  <div class="meta-box">
+    <div class="meta-item"><strong>Người phụ trách:</strong> Data Engineer / Dataset Specialist</div>
+    <div class="meta-item"><strong>Ngày phát hành:</strong> 03/11/2026</div>
+    <div class="meta-item"><strong>Phiên bản dữ liệu:</strong> v2.0 (Enriched & Normalized)</div>
+    <div class="meta-item"><strong>Trạng thái nạp Database:</strong> <span style="color: #1a7f37; font-weight: bold;">✔ Đã nạp thành công lên MongoDB Atlas</span></div>
+  </div>
+
+  <h2>I. TỔNG QUAN TẬP DỮ LIỆU (DATASET OVERVIEW)</h2>
+  <ul>
+    <li><strong>Số lượng bản ghi:</strong> <code>315</code> điểm đến du lịch phân bổ khắp các tỉnh thành Việt Nam.</li>
+    <li><strong>Nguồn dữ liệu gốc:</strong> <code>DataSet.xlsx</code> (315 POIs ban đầu).</li>
+    <li><strong>Nguồn ngữ cảnh bổ trợ:</strong> Kaggle <code>vuonglsts/vietnam-tourism-v2</code> (139 chủ đề, 1.386 đoạn văn ngữ cảnh du lịch Việt Nam).</li>
+    <li><strong>Đặc điểm nổi bật:</strong> 100% bản ghi đã được làm sạch, bổ sung nhãn ẩm thực & hoạt động, loại bỏ tag rác.</li>
+  </ul>
+
+  <h2>II. THÔNG TIN TRUY VẤN CƠ SỞ DỮ LIỆU (DATABASE SPEC)</h2>
+  <div class="meta-box" style="background-color: #fff8c5; border-color: #d4a72c;">
+    <div><strong>Database Name:</strong> <code>get_set_n_go_db</code></div>
+    <div><strong>Collection Name:</strong> <code>Places</code></div>
+    <div><strong>Tổng Document:</strong> <code>315</code></div>
+    <div><strong>File lưu trữ Offline:</strong> <code>backend/data/places_enriched.json</code></div>
+  </div>
+
+  <h3>Cấu trúc Document Mẫu:</h3>
+<pre>{
+  "id": "P001",
+  "name": "Bãi Dài Cam Ranh",
+  "destination": "Khánh Hòa",
+  "category": "sightseeing",
+  "description": "Bãi biển hoang sơ với vẻ đẹp tự nhiên, lý tưởng để thư giãn và tắm biển...",
+  "rating": "4.8/5",
+  "image": "https://www.uncovervietnam.com/wp-content/uploads/2021/06/bai-dai-beach-cam-ranh-vietnam.jpg",
+  "tags": [
+    "khánh hòa",
+    "biển đảo",
+    "thiên nhiên",
+    "nghỉ dưỡng",
+    "hải sản tươi sống",
+    "tắm biển & lặn ngắm san hô",
+    "biển"
+  ]
+}</pre>
+
+  <h3>Mô tả chi tiết các trường dữ liệu:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 15%;">Trường</th>
+        <th style="width: 12%;">Kiểu dữ liệu</th>
+        <th style="width: 10%;">Bắt buộc</th>
+        <th>Ý nghĩa & Hướng dẫn dành cho Backend / Frontend</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>id</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>Mã định danh duy nhất (<code>P001</code> – <code>P315</code>). Dùng làm React key khi render.</td>
+      </tr>
+      <tr>
+        <td><code>name</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>Tên địa điểm chính thức. Dùng hiển thị tiêu đề thẻ (Card Title).</td>
+      </tr>
+      <tr>
+        <td><code>destination</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>Tỉnh/Thành phố trực thuộc. Dùng để Backend query lọc theo tỉnh thành.</td>
+      </tr>
+      <tr>
+        <td><code>category</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>Thể loại chung (<code>sightseeing</code>, <code>culture</code>...).</td>
+      </tr>
+      <tr>
+        <td><code>description</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>Đoạn văn mô tả đã làm giàu từ Kaggle. Hiển thị chi tiết bài viết.</td>
+      </tr>
+      <tr>
+        <td><code>rating</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>Đánh giá của du khách (ví dụ: <code>4.8/5</code>).</td>
+      </tr>
+      <tr>
+        <td><code>image</code></td>
+        <td>String</td>
+        <td>Có</td>
+        <td>URL ảnh minh họa chất lượng cao.</td>
+      </tr>
+      <tr>
+        <td><code>tags</code></td>
+        <td>Array[String]</td>
+        <td>Có</td>
+        <td><strong>Mảng từ khóa đặc trưng chuẩn hóa. Input cốt lõi cho Cosine Similarity & Bộ lọc UI.</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>III. HỆ THỐNG PHÂN TẦNG NHÃN (TAG TAXONOMY)</h2>
+  <p>Toàn bộ 315 điểm đến được thiết kế theo cấu trúc nhãn phân tầng chặt chẽ:</p>
+
+  <div class="tag-group">
+    <strong>1. Nhãn Tỉnh / Thành:</strong>
+    <span class="tag-badge">hà nội</span>
+    <span class="tag-badge">đà nẵng</span>
+    <span class="tag-badge">khánh hòa</span>
+    <span class="tag-badge">hưng yên</span>
+    <span class="tag-badge">lâm đồng...</span>
+  </div>
+
+  <div class="tag-group">
+    <strong>2. Nhãn Địa hình (Cơ sở):</strong>
+    <span class="tag-badge">biển đảo</span>
+    <span class="tag-badge">núi rừng</span>
+    <span class="tag-badge">sông nước</span>
+    <span class="tag-badge">làng quê & đồng bằng</span>
+    <span class="tag-badge">đô thị</span>
+  </div>
+
+  <div class="tag-group">
+    <strong>3. Nhãn Thể loại (Chính):</strong>
+    <span class="tag-badge">thiên nhiên</span>
+    <span class="tag-badge">văn hóa - lịch sử</span>
+    <span class="tag-badge">nghỉ dưỡng</span>
+    <span class="tag-badge">ẩm thực</span>
+    <span class="tag-badge">vui chơi giải trí</span>
+  </div>
+
+  <div class="tag-group">
+    <strong>4. Nhãn Ẩm thực (Đặc sắc):</strong>
+    <span class="tag-badge">hải sản tươi sống</span>
+    <span class="tag-badge">đặc sản địa phương</span>
+    <span class="tag-badge">cà phê & trà</span>
+    <span class="tag-badge">ẩm thực đường phố</span>
+  </div>
+
+  <div class="tag-group">
+    <strong>5. Nhãn Trải nghiệm:</strong>
+    <span class="tag-badge">tắm biển & lặn ngắm san hô</span>
+    <span class="tag-badge">leo núi & trekking</span>
+    <span class="tag-badge">ngắm hoàng hôn & bình minh</span>
+    <span class="tag-badge">check-in sống ảo</span>
+    <span class="tag-badge">kiến trúc & di tích cổ</span>
+    <span class="tag-badge">lễ hội dân gian</span>
+  </div>
+
+  <h2>IV. HƯỚNG DẪN TRUY VẤN MẪU CHO BACKEND DEVELOPER</h2>
+<pre># Python - PyMongo Query Example
+import pymongo
+
+client = pymongo.MongoClient(MONGO_URI)
+db = client["get_set_n_go_db"]
+
+# Lọc các địa điểm tại Khánh Hòa và ẩn trường _id
+places = list(db.Places.find(
+    {"destination": {"$regex": "^Khánh Hòa$", "$options": "i"}},
+    {"_id": 0}
+))
+
+print(f"Tổng số địa điểm: {len(places)}")</pre>
+
+  <div class="footer">
+    Bản quyền tài liệu thuộc về Nhóm Phát triển TravelMate • Lưu hành nội bộ đồ án • Ngày tạo: 03/11/2026
+  </div>
+
+</body>
+</html>

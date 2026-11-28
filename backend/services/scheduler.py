@@ -13,6 +13,8 @@ def get_item_name(item: Any) -> str:
             item.get("name")
             or item.get("restaurant_name")
             or item.get("food_name")
+            or item.get("dish_name")
+            or item.get("food_name")
             or "Chưa có tên"
         )
 
@@ -30,7 +32,9 @@ def generate_schedule(
 
     - Mỗi ngày tối đa 2 địa điểm tham quan.
     - Ưu tiên phân bổ địa điểm đều giữa các ngày.
-    - Nhà hàng và món ăn được phân bổ riêng.
+    - Chỉ đưa địa điểm và nhà hàng vào lịch trình.
+    - Giữ nguyên toàn bộ dữ liệu gốc của địa điểm và nhà hàng.
+    - Món ăn không được tạo thành hoạt động riêng.
     - Địa điểm chưa được xếp lịch sẽ được lưu lại.
     """
 
@@ -51,48 +55,51 @@ def generate_schedule(
         raise TypeError("Dữ liệu đầu vào phải là danh sách.")
 
     # 2. Tạo hoạt động tham quan
+    # Giữ toàn bộ thông tin gốc của địa điểm.
     place_activities = []
 
     for place in places:
-        place_activities.append({
-            "type": "place",
-            "name": get_item_name(place),
-            "tags": (
-                place.get("tags", [])
-                if isinstance(place, dict)
-                else []
-            )
-        })
+
+        if isinstance(place, dict):
+            activity = place.copy()
+
+            activity["type"] = "place"
+            activity["name"] = get_item_name(place)
+
+        else:
+            activity = {
+                "type": "place",
+                "name": get_item_name(place)
+            }
+
+        place_activities.append(activity)
 
     # 3. Tạo hoạt động nhà hàng
+    # Giữ toàn bộ thông tin gốc, bao gồm safe_dishes/dishes
+    # nếu dữ liệu nhà hàng đã có những trường này.
     restaurant_activities = []
 
     for restaurant in restaurants:
-        restaurant_activities.append({
-            "type": "restaurant",
-            "name": get_item_name(restaurant),
-            "rating": (
-                restaurant.get("rating")
-                if isinstance(restaurant, dict)
-                else None
-            )
-        })
 
-    # 4. Tạo hoạt động món ăn an toàn từ TV2
-    food_activities = []
+        if isinstance(restaurant, dict):
+            activity = restaurant.copy()
 
-    for dish in safe_dishes:
-        food_activities.append({
-            "type": "food",
-            "name": get_item_name(dish)
-        })
+            activity["type"] = "restaurant"
+            activity["name"] = get_item_name(restaurant)
 
-    # 5. Kết hợp nhà hàng và món ăn
-    other_activities = (
-        restaurant_activities + food_activities
-    )
+        else:
+            activity = {
+                "type": "restaurant",
+                "name": get_item_name(restaurant)
+            }
 
-    # 6. Khởi tạo lịch trình
+        restaurant_activities.append(activity)
+
+    # 4. Không tạo hoạt động món ăn riêng.
+    # safe_dishes được giữ lại trong dữ liệu đầu vào để tương thích
+    # với luồng xử lý hiện tại, nhưng không được thêm vào lịch trình.
+
+    # 5. Khởi tạo lịch trình
     schedule = []
 
     for day_index in range(duration):
@@ -101,7 +108,7 @@ def generate_schedule(
             "activities": []
         })
 
-    # 7. Phân bổ địa điểm tham quan đều giữa các ngày
+    # 6. Phân bổ địa điểm tham quan đều giữa các ngày
     total_places = len(place_activities)
 
     # Tổng sức chứa địa điểm tham quan
@@ -141,8 +148,8 @@ def generate_schedule(
             daily_places
         )
 
-    # 8. Phân bổ nhà hàng và món ăn riêng
-    for index, activity in enumerate(other_activities):
+    # 7. Phân bổ nhà hàng riêng
+    for index, activity in enumerate(restaurant_activities):
 
         day_index = index % duration
 
@@ -150,16 +157,16 @@ def generate_schedule(
             activity
         )
 
-    # 9. Lưu địa điểm chưa được xếp lịch
+    # 8. Lưu địa điểm chưa được xếp lịch
     remaining_places = place_activities[place_index:]
 
-    # 10. Tính tổng hoạt động đã được xếp lịch
+    # 9. Tính tổng hoạt động đã được xếp lịch
     total_scheduled = sum(
         len(day["activities"])
         for day in schedule
     )
 
-    # 11. Trả kết quả
+    # 10. Trả kết quả
     return {
         "success": True,
         "total_days": duration,

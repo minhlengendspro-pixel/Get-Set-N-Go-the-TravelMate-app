@@ -12,7 +12,9 @@ class SearchHistorySchema(BaseModel):
         Literal[
             "random_challenge",
             "scheduler",
-            "place_recommendation"
+            "place_recommendation",
+            "restaurant",
+            "food",
         ]
     ] = None
 

@@ -1,3 +1,4 @@
+
 from fastapi import APIRouter, HTTPException, Query
 
 from models.search_history import SearchHistorySchema
@@ -19,6 +20,12 @@ router = APIRouter(
 def save_search_history(history: SearchHistorySchema):
     """
     Lưu lịch sử tìm kiếm hoặc tạo lịch trình.
+    Hỗ trợ 5 loại:
+    - random_challenge
+    - scheduler
+    - place_recommendation
+    - restaurant
+    - food
     """
 
     try:
@@ -44,18 +51,23 @@ def read_search_history(
     limit: int = Query(default=50, ge=1, le=100),
     search_type: str | None = Query(
         default=None,
-        description="random_challenge, scheduler hoặc place_recommendation"
+        description=(
+            "random_challenge, scheduler, place_recommendation, "
+            "restaurant hoặc food"
+        )
     )
 ):
     """
     Lấy danh sách lịch sử.
-    Có thể lọc theo loại lịch sử.
+    Có thể lọc theo 5 loại lịch sử.
     """
 
     allowed_types = [
         "random_challenge",
         "scheduler",
-        "place_recommendation"
+        "place_recommendation",
+        "restaurant",
+        "food"
     ]
 
     if search_type and search_type not in allowed_types:

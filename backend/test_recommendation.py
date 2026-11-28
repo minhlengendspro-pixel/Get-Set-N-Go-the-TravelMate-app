@@ -1,4 +1,11 @@
 
+import sys
+import os
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 import unittest
 
 from backend.services.place_recommendation import recommend_places

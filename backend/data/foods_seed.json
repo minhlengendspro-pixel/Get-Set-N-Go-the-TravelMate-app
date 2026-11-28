@@ -1,0 +1,3287 @@
+[
+  {
+    "id": "F001",
+    "name": "Bún cá Châu Đốc",
+    "destination": "An Giang",
+    "description": "Tô bún cá lóc đồng xào nghệ vàng óng trong nước lèo hầm ngải bún thanh ngọt, ăn kèm bông điên điển và rau nhút.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "an giang",
+      "bún cá châu đốc",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F002",
+    "name": "Bánh bò thốt nốt",
+    "destination": "An Giang",
+    "description": "Bánh bò xốp mềm thơm ngát mùi đường thốt nốt Bảy Núi hòa cùng nước cốt dừa béo bùi bọc lá chuối.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "an giang",
+      "bánh bò thốt nốt",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F003",
+    "name": "Tung lò mò (Lạp xưởng bò)",
+    "destination": "An Giang",
+    "description": "Đặc sản người Chăm làm từ thịt bò tươi nướng trên than hồng thơm lừng bùi béo chua ngọt hài hòa.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "an giang",
+      "tung lò mò",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F004",
+    "name": "Bánh khọt Vũng Tàu",
+    "destination": "Bà Rịa - Vũng Tàu",
+    "description": "Bánh khọt vỏ giòn rụm nhân tôm biển tươi đỏ au, rắc bột tôm cháy, cuốn xà lách cải xanh chấm nước mắm đu đủ.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "bà rịa - vũng tàu",
+      "bánh khọt",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F005",
+    "name": "Lẩu cá đuối lá giang",
+    "destination": "Bà Rịa - Vũng Tàu",
+    "description": "Cá đuối thịt dai mềm sụn sần sật nấu lẩu chua ngọt với lá giang và măng chua cay ấm nồng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "bà rịa - vũng tàu",
+      "lẩu cá đuối",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F006",
+    "name": "Gỏi cá mai Vũng Tàu",
+    "destination": "Bà Rịa - Vũng Tàu",
+    "description": "Cá mai tươi phi lê rút xương trộn mè đậu phộng rau thơm, cuốn bánh tráng chấm nước tương gan mè gia truyền.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "bà rịa - vũng tàu",
+      "gỏi cá mai",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F007",
+    "name": "Bánh bông lan trứng muối Gốc Cột Điện",
+    "destination": "Bà Rịa - Vũng Tàu",
+    "description": "Bánh bông lan nướng lò than mềm xốp thơm bơ kết hợp vị mặn bùi của trứng muối và chà bông.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "bà rịa - vũng tàu",
+      "bánh bông lan trứng muối",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F008",
+    "name": "Tiết canh tôm hùm Long Hải",
+    "destination": "Bà Rịa - Vũng Tàu",
+    "description": "Món ẩm thực quý tộc từ tôm hùm rồng tươi sống, tiết tôm màu xanh ngọc bích hòa cùng thịt tôm giòn sần sật.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "bà rịa - vũng tàu",
+      "tiết canh tôm hùm",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F009",
+    "name": "Bánh bèo bì Lái Thiêu",
+    "destination": "Bình Dương",
+    "description": "Bánh bèo gạo dẻo rưới đậu xanh xay nhuyễn phủ bì heo trộn thính và thịt nạc ram thơm béo chấm mắm chua ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình dương",
+      "bánh bèo bì lái thiêu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F010",
+    "name": "Gỏi măng cụt Lái Thiêu",
+    "destination": "Bình Dương",
+    "description": "Măng cụt chua chua giòn giòn trộn gà ta xé phay rau răm đậu phộng ngon thanh cảnh mùa trái chín.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình dương",
+      "gỏi măng cụt",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F011",
+    "name": "Bò nướng ngói Bình Dương",
+    "destination": "Bình Dương",
+    "description": "Thịt bò tươi ướp gia vị nướng trên miếng ngói nung giữ trọn độ mọng nước mềm ngọt cuốn bánh tráng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình dương",
+      "bò nướng ngói",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F012",
+    "name": "Hạt điều rang muối Bình Phước",
+    "destination": "Bình Phước",
+    "description": "Hạt điều vỏ lụa nguyên hạt rang muối giòn tan thơm lừng béo ngậy nức tiếng số một Việt Nam.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình phước",
+      "hạt điều rang muối",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F013",
+    "name": "Cơm lam đọt mây nướng",
+    "destination": "Bình Phước",
+    "description": "Món ăn mộc mạc của đồng bào S'tiêng kết hợp cơm nếp dẻo thơm và đọt mây nướng đắng ngọt dịu trên than hồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình phước",
+      "cơm lam đọt mây",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F014",
+    "name": "Heo thả rông nướng mắc mật",
+    "destination": "Bình Phước",
+    "description": "Thịt heo mọi thả rông tẩm ướp lá mắc mật nướng than hoa vàng giòn da ngọt thịt mọng nước.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình phước",
+      "heo thả rông nướng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F015",
+    "name": "Lẩu thả Mũi Né",
+    "destination": "Bình Thuận",
+    "description": "Món lẩu nghệ thuật từ cá mai tươi tái chanh bày trên bẹ chuối, ăn cùng thịt luộc trứng thái chỉ và nước sốt tương đậu phộng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "bình thuận",
+      "lẩu thả",
+      "mũi né",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F016",
+    "name": "Bánh căn Phan Thiết",
+    "destination": "Bình Thuận",
+    "description": "Bánh căn khuôn gốm giòn xốp nhân tôm thịt, nhúng ngập trong tô nước mắm cá kho có viên xíu mại béo ngậy.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "bình thuận",
+      "bánh căn",
+      "phan thiết",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F017",
+    "name": "Răng mực nướng giòn",
+    "destination": "Bình Thuận",
+    "description": "Răng mực tươi tẩm ướp cay mặn xiên que nướng than hồng giòn sần sật, món nhậu đường phố nức tiếng bờ kè.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "bình thuận",
+      "răng mực",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F018",
+    "name": "Gỏi cá mai Phan Thiết",
+    "destination": "Bình Thuận",
+    "description": "Cá mai biển tươi trong veo rút xương bóp chanh thính gạo, cuốn bánh tráng chấm nước tương ớt mè thơm lừng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "bình thuận",
+      "gỏi cá mai",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F019",
+    "name": "Nước mắm Phan Thiết truyền thống",
+    "destination": "Bình Thuận",
+    "description": "Nước mắm cá cơm ủ chượp thùng gỗ vàng rơm óng ả, độ đạm cao ngọt thanh đầm vị biển.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình thuận",
+      "nước mắm phan thiết",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F020",
+    "name": "Bánh xèo tôm nhảy Quy Nhơn",
+    "destination": "Bình Định",
+    "description": "Tôm đất tươi sống nhảy tanh tách trên chảo dầu sôi, tạo nên lớp bánh giòn rụm cuốn bánh tráng rau mầm.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "bình định",
+      "bánh xèo tôm nhảy",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F021",
+    "name": "Bún chả cá Quy Nhơn",
+    "destination": "Bình Định",
+    "description": "Tô bún chả cá quết dẻo ngọt từ cá thu cá mối, nước lèo nấu từ đầu cá và xương thanh ngọt tự nhiên.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "bình định",
+      "bún chả cá quy nhơn",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F022",
+    "name": "Nem chợ Huyện",
+    "destination": "Bình Định",
+    "description": "Nem chua gói lá ổi nướng than hồng bọc ngoài lá chuối, vị chua thanh ngọt bùi chấm tương ớt xào tỏi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình định",
+      "nem chợ huyện",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F023",
+    "name": "Bánh ít lá gai",
+    "destination": "Bình Định",
+    "description": "Bánh nếp đen dẻo thơm ngát mùi lá gai bọc nhân dừa đậu phộng bùi ngọt, gói hình tháp đặc trưng đất võ.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình định",
+      "bánh ít lá gai",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F024",
+    "name": "Rượu Bàu Đá",
+    "destination": "Bình Định",
+    "description": "Danh tửu nức tiếng được nấu từ gạo nếp hạt ngọc và nguồn nước ngầm làng Bàu Đá, hương nồng say ngất ngây.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bình định",
+      "rượu bàu đá",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F025",
+    "name": "Bánh tằm bì Bạc Liêu",
+    "destination": "Bạc Liêu",
+    "description": "Sợi bánh tằm xắt tay dai mềm phủ bì heo giòn ngập tràn nước sốt cà ri béo ngậy chan nước cốt dừa và mắm tỏi ớt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bạc liêu",
+      "bánh tằm bì bạc liêu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F026",
+    "name": "Lẩu mắm Bạc Liêu",
+    "destination": "Bạc Liêu",
+    "description": "Nồi lẩu đậm vị mắm cá đồng bốc khói nghi ngút nhúng cá kèo tươi, tôm đất và các loại rau đồng trù phú.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bạc liêu",
+      "lẩu mắm bạc liêu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F027",
+    "name": "Bún nước lèo Bạc Liêu",
+    "destination": "Bạc Liêu",
+    "description": "Nước lèo cá lóc nấu cùng mắm bồ hóc dậy mùi thanh tao, ăn kèm bắp chuối thái mỏng và giá đỗ.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bạc liêu",
+      "bún nước lèo",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F028",
+    "name": "Vải thiều Lục Ngạn",
+    "destination": "Bắc Giang",
+    "description": "Vải thiều hạt nhỏ cùi dày mọng nước ngọt sắc nức tiếng trong và ngoài nước.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc giang",
+      "vải thiều lục ngạn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F029",
+    "name": "Bánh đa Thổ Hà",
+    "destination": "Bắc Giang",
+    "description": "Bánh đa nướng giòn tan thơm lừng mè vừng bùi béo sản xuất từ làng nghề cổ ven sông Cầu.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc giang",
+      "bánh đa thổ hà",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F030",
+    "name": "Gà đồi Yên Thế",
+    "destination": "Bắc Giang",
+    "description": "Thịt gà chạy đồi săn chắc da vàng giòn ngọt thịt luộc chấm muối ớt tiêu vắt chanh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc giang",
+      "gà đồi yên thế",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F031",
+    "name": "Cá nướng hồ Ba Bể",
+    "destination": "Bắc Kạn",
+    "description": "Cá suối tươi bắt từ hồ Ba Bể nẹp que tre nướng than hồng thơm ngọt nguyên vị chấm muối ớt gừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc kạn",
+      "cá nướng ba bể",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F032",
+    "name": "Miến dong Na Rì",
+    "destination": "Bắc Kạn",
+    "description": "Sợi miến làm từ củ dong riềng thủ công trong suốt dai giòn nấu canh gà đậm đà hương núi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc kạn",
+      "miến dong na rì",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F033",
+    "name": "Lạp xưởng hun khói Bắc Kạn",
+    "destination": "Bắc Kạn",
+    "description": "Lạp xưởng lòng non heo ướp gừng đá mắc khén hun khói mía thơm lừng dai giòn béo ngậy.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc kạn",
+      "lạp xưởng hun khói",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F034",
+    "name": "Bánh phu thê Đình Bảng",
+    "destination": "Bắc Ninh",
+    "description": "Bánh bọc lá dong dẻo thơm nếp cái hoa vàng giòn sần sật đu đủ nạo bọc nhân đậu xanh ngọt bùi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc ninh",
+      "bánh phu thê đình bảng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F035",
+    "name": "Nem bùi Ninh Xá",
+    "destination": "Bắc Ninh",
+    "description": "Thịt nạc thính gạo rang nghiền nhỏ cuốn lá sung chấm tương ớt cay nồng đượm tình quan họ.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc ninh",
+      "nem bùi ninh xá",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F036",
+    "name": "Cháo cá Tích Nghi",
+    "destination": "Bắc Ninh",
+    "description": "Cháo cá chép nấu bung nhừ thịt cá xào nghệ thơm phức ngọt bùi đậm đà phố cổ Bắc Ninh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bắc ninh",
+      "cháo cá tích nghi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F037",
+    "name": "Kẹo dừa Bến Tre",
+    "destination": "Bến Tre",
+    "description": "Kẹo dừa dẻo thơm béo ngậy làm từ mạch nha nếp và nước cốt dừa nguyên chất xứ dừa Đồng Khởi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bến tre",
+      "kẹo dừa bến tre",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F038",
+    "name": "Gỏi củ hủ dừa tôm thịt",
+    "destination": "Bến Tre",
+    "description": "Phần đọt non tinh túy của cây dừa giòn ngọt trộn tôm sú thịt ba rọi chấm nước mắm tỏi ớt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bến tre",
+      "gỏi củ hủ dừa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F039",
+    "name": "Cơm hấp nước dừa tôm rim",
+    "destination": "Bến Tre",
+    "description": "Cơm nấu trong trái dừa xiêm ngấm vị ngọt béo ăn cùng tôm đất rim mặn mà độc đáo.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "bến tre",
+      "cơm dừa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F040",
+    "name": "Bánh cuốn Cao Bằng",
+    "destination": "Cao Bằng",
+    "description": "Bánh tráng mỏng nhân thịt băm mộc nhĩ chấm bát nước dùng hầm xương ngọt thanh kèm giò nạc và măng ngâm mắc mật.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "cao bằng",
+      "bánh cuốn cao bằng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F041",
+    "name": "Vịt quay 7 vị Cao Bằng",
+    "destination": "Cao Bằng",
+    "description": "Thịt vịt ướp 7 loại gia vị bí truyền của người Tày nướng than hồng da giòn óng đỏ thịt mềm ngọt ngào.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "cao bằng",
+      "vịt quay 7 vị",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F042",
+    "name": "Bánh áp chao Cao Bằng",
+    "destination": "Cao Bằng",
+    "description": "Bánh nếp dẻo bọc thịt vịt ướp chiên ngập dầu giòn tan nóng hổi xua tan mùa đông lạnh giá biên cương.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "cao bằng",
+      "bánh áp chao",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F043",
+    "name": "Cua Năm Căn Cà Mau",
+    "destination": "Cà Mau",
+    "description": "Cua biển thịt chắc ngọt lịm gạch son béo ngậy hấp bia nướng mọi chấm muối tiêu chanh danh bất hư truyền.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "cà mau",
+      "cua năm căn",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F044",
+    "name": "Cá thòi lòi nướng muối ớt",
+    "destination": "Cà Mau",
+    "description": "Loài cá leo cây độc đáo vùng đất mũi thịt dai thơm ngọt tự nhiên nướng muối ớt cay nồng trên bếp than.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "cà mau",
+      "cá thòi lòi",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F045",
+    "name": "Tôm khô Rạch Gốc",
+    "destination": "Cà Mau",
+    "description": "Tôm đất thiên nhiên luộc phơi nắng gió biển đỏ au ngọt bùi dùng ăn liền hoặc nấu canh ngọt thanh.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "cà mau",
+      "tôm khô rạch gốc",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F046",
+    "name": "Lẩu mắm Cần Thơ",
+    "destination": "Cần Thơ",
+    "description": "Nồi lẩu thơm nức mùi mắm cá linh cá sặc đồng, ngập tràn thịt ba rọi tôm cá và hơn 20 loại rau bông miền sông nước.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "cần thơ",
+      "lẩu mắm",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F047",
+    "name": "Bánh cống Cần Thơ",
+    "destination": "Cần Thơ",
+    "description": "Chiếc bánh bột đậu xanh giòn rụm bên trên có con tôm tươi đỏ au, ăn cùng rau cải đắng chấm nước mắm chua ngọt.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "cần thơ",
+      "bánh cống",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F048",
+    "name": "Nem nướng Cái Răng",
+    "destination": "Cần Thơ",
+    "description": "Nem thịt heo quết mịn nướng than hoa vàng rộm, cuốn bánh tráng rau sống khế chua chuối chát chấm tương nếp mịn.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "cần thơ",
+      "nem nướng cái răng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F049",
+    "name": "Ốc nướng tiêu xanh",
+    "destination": "Cần Thơ",
+    "description": "Ốc bươu béo ngậy nướng trên than hồng cùng nước sốt tiêu xanh cay the nồng đậm đà vị miền Tây.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "cần thơ",
+      "ốc nướng tiêu",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F050",
+    "name": "Bánh tét lá cẩm Cần Thơ",
+    "destination": "Cần Thơ",
+    "description": "Đòn bánh tét màu tím cẩm bắt mắt nhân đậu xanh thịt mỡ trứng muối béo bùi dẻo thơm nức tiếng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "cần thơ",
+      "bánh tét lá cẩm",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F051",
+    "name": "Phở hai tô Gia Lai (Phở khô)",
+    "destination": "Gia Lai",
+    "description": "Tô bánh phở trụng riêng trộn tương đen tốp mỡ ăn kèm tô nước dùng thịt bò hoặc gà ngọt lịm thanh tao.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "gia lai",
+      "phở hai tô",
+      "phở khô gia lai",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F052",
+    "name": "Bò một nắng chấm muối kiến vàng",
+    "destination": "Gia Lai",
+    "description": "Bò cỏ Krông Pa nướng than hồng thơm ngọt dai dai chấm muối trứng kiến vàng chua nổ bôm bốp.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "gia lai",
+      "bò một nắng",
+      "muối kiến vàng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F053",
+    "name": "Gà nướng cơm lam Pleiku",
+    "destination": "Gia Lai",
+    "description": "Gà thả đồi tẩm ướp mật ong rừng nướng giòn rụm ăn cùng ống cơm lam dẻo thơm chấm muối mè.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "gia lai",
+      "gà nướng cơm lam",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F054",
+    "name": "Cháo ấu tẩu Đồng Văn",
+    "destination": "Hà Giang",
+    "description": "Bát cháo nấu từ củ ấu tẩu hầm chân giò nếp nương, vị đắng thanh ban đầu ngọt lịm về sau, giúp giải cảm bổ dưỡng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà giang",
+      "cháo ấu tẩu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F055",
+    "name": "Thịt trâu gác bếp",
+    "destination": "Hà Giang",
+    "description": "Thịt bắp trâu tươi ướp ớt tỏi mắc khén treo gác bếp hun khói củi nhãn, xé sợi dai thơm nồng nàn.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà giang",
+      "thịt trâu gác bếp",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F056",
+    "name": "Bánh tam giác mạch",
+    "destination": "Hà Giang",
+    "description": "Bánh nướng thơm lừng từ bột hạt tam giác mạch dẻo bùi xốp mịn đặc trưng của mùa hoa cao nguyên đá.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hà giang",
+      "bánh tam giác mạch",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F057",
+    "name": "Thắng dền phố cổ Đồng Văn",
+    "destination": "Hà Giang",
+    "description": "Viên bánh nếp nhân đậu phộng nấu cùng nước đường gừng nóng hổi, rắc vừng dừa ấm áp đêm đông lạnh.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hà giang",
+      "thắng dền",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F058",
+    "name": "Phở chua Hà Giang",
+    "destination": "Hà Giang",
+    "description": "Sợi phở tươi trộn thịt lợn quay, lạp xưởng, rau thơm và nước sốt chua ngọt thanh mát lạ miệng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hà giang",
+      "phở chua",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F059",
+    "name": "Cá kho làng Vũ Đại",
+    "destination": "Hà Nam",
+    "description": "Cá trắm đen kho niêu đất 16 tiếng cùng nước cốt cua đồng sườn lợn và gừng riềng, xương mềm thịt chắc thơm lừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà nam",
+      "cá kho vũ đại",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F060",
+    "name": "Bánh cuốn chả Phủ Lý",
+    "destination": "Hà Nam",
+    "description": "Bánh cuốn nguội mỏng mịn ăn cùng chả thịt nướng than hoa thơm lừng và bát nước chấm chua ngọt ấm nóng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hà nam",
+      "bánh cuốn phủ lý",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F061",
+    "name": "Bún cá rô đồng Hà Nam",
+    "destination": "Hà Nam",
+    "description": "Thịt cá rô đồng chiên giòn ngọt xương hầm nước dùng thanh mát ăn cùng rau ngót hoặc rau cải non.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà nam",
+      "bún cá rô đồng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F062",
+    "name": "Phở bò Hà Nội",
+    "destination": "Hà Nội",
+    "description": "Món quốc hồn quốc túy với nước dùng thanh trong ninh từ xương bò, bánh phở mềm và thịt bò thơm ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà nội",
+      "phở bò",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F063",
+    "name": "Bún chả Hà Nội",
+    "destination": "Hà Nội",
+    "description": "Chả thịt nướng than hoa thơm lừng ăn kèm bún tươi, rau sống và bát nước chấm chua ngọt trứ danh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà nội",
+      "bún chả",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F064",
+    "name": "Chả cá Lã Vọng",
+    "destination": "Hà Nội",
+    "description": "Cá lăng ướp riềng nghệ nướng vàng ruộm rồi xào trên chảo nóng cùng thì là, hành hoa và mắm tôm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà nội",
+      "chả cá lã vọng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F065",
+    "name": "Bánh cuốn Thanh Trì",
+    "destination": "Hà Nội",
+    "description": "Bánh cuốn mỏng tang rắc hành phi thơm nức, chấm nước mắm cà cuống hoặc ăn kèm chả quế.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hà nội",
+      "bánh cuốn",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F066",
+    "name": "Cà phê trứng Giảng",
+    "destination": "Hà Nội",
+    "description": "Thức uống sáng tạo kết hợp giữa lòng đỏ trứng gà đánh bông mịn màng và cà phê phin đậm đà.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "hà nội",
+      "cà phê trứng",
+      "cà phê & trà"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F067",
+    "name": "Kẹo cu đơ Hà Tĩnh",
+    "destination": "Hà Tĩnh",
+    "description": "Chiếc kẹo kẹp bánh tráng nướng giòn tan bọc lớp mật mía gừng dẻo quẹo hạt lạc bùi béo uống trà xanh ấm nồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hà tĩnh",
+      "kẹo cu đơ hà tĩnh",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F068",
+    "name": "Mực nhảy Vũng Áng",
+    "destination": "Hà Tĩnh",
+    "description": "Mực ống biển tươi sống vớt lên bờ còn đổi màu lấp lánh nướng mọi hoặc hấp gừng ngọt lịm giòn tan.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "hà tĩnh",
+      "mực nhảy vũng áng",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F069",
+    "name": "Ram mướt Hà Tĩnh",
+    "destination": "Hà Tĩnh",
+    "description": "Bánh mướt mỏng mịn cuốn chiếc ram thịt tẩm ướp giòn rụm chấm nước mắm tỏi ớt chanh chuẩn vị xứ Nghệ.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hà tĩnh",
+      "ram mướt hà tĩnh",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F070",
+    "name": "Cơm lam Mường Động",
+    "destination": "Hòa Bình",
+    "description": "Gạo nếp nương thơm dẻo nút lá chuối nướng ống nứa chấm muối vừng bùi thơm ngát mùi núi non.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hòa bình",
+      "cơm lam mường động",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F071",
+    "name": "Thịt lợn muối chua Hòa Bình",
+    "destination": "Hòa Bình",
+    "description": "Thịt lợn ướp thính gạo rang lá trầu men rừng ủ chum hương vị chua bùi thơm lạ cuốn lá rừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hòa bình",
+      "thịt lợn muối chua",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F072",
+    "name": "Cá nướng sông Đà",
+    "destination": "Hòa Bình",
+    "description": "Cá lăng cá ngạnh sông Đà tươi ngon tẩm ướp hạt dổi nướng kẹp tre vàng ruộm chấm muối ớt xanh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hòa bình",
+      "cá nướng sông đà",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F073",
+    "name": "Nhãn lồng Hưng Yên",
+    "destination": "Hưng Yên",
+    "description": "Trái nhãn cùi dày hạt nhỏ giòn ngọt đậm đà hương thơm đặc trưng của vương quốc đệ nhất danh quả.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hưng yên",
+      "nhãn lồng hưng yên",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F074",
+    "name": "Chè hạt sen long nhãn",
+    "destination": "Hưng Yên",
+    "description": "Sự kết hợp vương giả giữa hạt sen bở bùi lồng trong cùi nhãn ngọt thanh nấu đường phèn thanh mát.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hưng yên",
+      "chè hạt sen long nhãn",
+      "tráng miệng"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F075",
+    "name": "Gà Đông Tảo luộc xôi nếp",
+    "destination": "Hưng Yên",
+    "description": "Giống gà tiến vua đôi chân to sần sùi thịt dai giòn sần sật ngọt đậm luộc chấm muối tiêu chanh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hưng yên",
+      "gà đông tảo",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F076",
+    "name": "Bánh đậu xanh Hải Dương",
+    "destination": "Hải Dương",
+    "description": "Bột đậu xanh mịn màng béo bùi thoang thoảng hương hoa bưởi ngọt thanh tan ngay đầu lưỡi khi uống trà.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hải dương",
+      "bánh đậu xanh hải dương",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F077",
+    "name": "Rươi Tứ Kỳ (Chả rươi)",
+    "destination": "Hải Dương",
+    "description": "Đặc sản mùa rươi chả rán thơm lừng trứng gà thịt nạc vỏ quýt thì là giòn rụm béo ngậy ngọt lịm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hải dương",
+      "chả rươi tứ kỳ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F078",
+    "name": "Bánh gai Ninh Giang",
+    "destination": "Hải Dương",
+    "description": "Vỏ bánh dẻo mịn đen nhánh thơm mùi lá gai bọc nhân đậu xanh mỡ lợn hạt sen mứt dừa thơm phức.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hải dương",
+      "bánh gai ninh giang",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F079",
+    "name": "Bánh đa cua Hải Phòng",
+    "destination": "Hải Phòng",
+    "description": "Sợi bánh đa đỏ dai mềm chan nước riêu cua đồng béo ngậy thơm lừng chả lá lốt tôm tươi và rau muống giòn.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hải phòng",
+      "bánh đa cua",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F080",
+    "name": "Bánh mì cay Pate Cột Đèn",
+    "destination": "Hải Phòng",
+    "description": "Bánh mì que nhỏ giòn rụm kẹp pate gan heo béo bùi chấm tương ớt chí chương cay nồng trứ danh đất Cảng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hải phòng",
+      "bánh mì cay",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F081",
+    "name": "Nem cua bể Hải Phòng",
+    "destination": "Hải Phòng",
+    "description": "Miếng nem vuông vức nhân đầy ắp thịt cua bể tươi ngon, mộc nhĩ nấm hương rán giòn rụm chấm nước mắm giấm tỏi.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "hải phòng",
+      "nem cua bể",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F082",
+    "name": "Giá bể xào chua ngọt",
+    "destination": "Hải Phòng",
+    "description": "Con giá bể thịt giòn sần sật xào sốt me chua cay sánh đặc ăn cùng rau thơm tạo trải nghiệm ẩm thực độc đáo.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hải phòng",
+      "giá bể xào",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F083",
+    "name": "Chè dừa dầm Hải Phòng",
+    "destination": "Hải Phòng",
+    "description": "Ly chè mát lạnh đầy thạch dừa giòn sần sật, cùi dừa non, trân châu dẻo quyện trong nước cốt dừa béo ngậy.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "hải phòng",
+      "chè dừa dầm",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F084",
+    "name": "Chả cá thát lát Hậu Giang",
+    "destination": "Hậu Giang",
+    "description": "Cá thát lát nạo quết dẻo dai thì là tiêu sọ chiên phồng vàng ruộm hoặc nấu lẩu khổ qua thanh mát ngọt lành.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hậu giang",
+      "chả cá thát lát",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F085",
+    "name": "Khóm Cầu Đúc",
+    "destination": "Hậu Giang",
+    "description": "Giống dứa quả to cùi dày mọng nước ngọt thanh ít xơ dùng ăn tươi hoặc xào tôm tép đậm đà.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hậu giang",
+      "khóm cầu đúc",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F086",
+    "name": "Bưởi năm roi Phú Hữu",
+    "destination": "Hậu Giang",
+    "description": "Bưởi múi mọng tép đều vị ngọt thanh hơi chua nhẹ róc vỏ nức tiếng đồng bằng sông Cửu Long.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "hậu giang",
+      "bưởi năm roi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F087",
+    "name": "Bún chả cá sứa Nha Trang",
+    "destination": "Khánh Hòa",
+    "description": "Nước dùng trong vắt nấu từ cá biển, chả cá chiên giòn dai kết hợp sứa tươi giòn sần sật mát lạnh.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "khánh hòa",
+      "bún chả cá",
+      "bún sứa",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F088",
+    "name": "Nem nướng Ninh Hòa",
+    "destination": "Khánh Hòa",
+    "description": "Từng que nem thịt heo quết nướng vàng thơm, cuốn bánh tráng chiên giòn, rau sống chấm nước sốt tương tôm gan nếp.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "khánh hòa",
+      "nem nướng ninh hòa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F089",
+    "name": "Bánh căn hải sản Nha Trang",
+    "destination": "Khánh Hòa",
+    "description": "Bánh căn nướng khuôn đất giòn đáy nhân mực sim tươi, trứng cút, chấm nước mắm mỡ hành hoặc mắm nêm.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "khánh hòa",
+      "bánh căn",
+      "mực",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F090",
+    "name": "Tôm hùm Bình Ba",
+    "destination": "Khánh Hòa",
+    "description": "Tôm hùm đảo Bình Ba tươi sống thịt chắc ngọt lịm nướng phô mai hoặc nướng mọi trên than hồng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "khánh hòa",
+      "tôm hùm",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F091",
+    "name": "Yến sào đảo yến Khánh Hòa",
+    "destination": "Khánh Hòa",
+    "description": "Món đại bổ từ tổ yến thiên nhiên nguyên chất chưng đường phèn, hạt sen và táo đỏ thanh mát bổ dưỡng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "khánh hòa",
+      "yến sào",
+      "cao cấp",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F092",
+    "name": "Gỏi cá trích Phú Quốc",
+    "destination": "Kiên Giang",
+    "description": "Thịt cá trích tươi rói tái chanh trộn dừa nạo, hành tây cuốn bánh tráng chấm nước mắm nhĩ Phú Quốc gia truyền.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "kiên giang",
+      "gỏi cá trích",
+      "phú quốc",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F093",
+    "name": "Bún quậy Phú Quốc",
+    "destination": "Kiên Giang",
+    "description": "Thực khách tự quậy nước chấm từ muối ớt đường tắc, ăn cùng sợi bún tươi quết chả tôm mực thơm lừng nước lèo nóng hổi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "kiên giang",
+      "bún quậy",
+      "phú quốc",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F094",
+    "name": "Nhum biển nướng mỡ hành",
+    "destination": "Kiên Giang",
+    "description": "Nhum biển (cầu gai) tươi béo ngậy nướng than hoa rắc mỡ hành thơm phức và đậu phộng rang giòn.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "kiên giang",
+      "nhum biển",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F095",
+    "name": "Cơm ghẹ Hàm Ninh",
+    "destination": "Kiên Giang",
+    "description": "Thịt ghẹ tươi luộc xé sợi xào cơm vàng ươm cùng hành tây, tỏi phi và nước mắm ớt thơm lừng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "kiên giang",
+      "cơm ghẹ",
+      "phú quốc",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F096",
+    "name": "Rượu sim rừng Phú Quốc",
+    "destination": "Kiên Giang",
+    "description": "Loại rượu lên men tự nhiên từ trái sim rừng chín mọng, vị ngọt chát nồng nàn đặc trưng của đảo ngọc.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "kiên giang",
+      "rượu sim",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F097",
+    "name": "Gỏi lá Kon Tum",
+    "destination": "Kon Tum",
+    "description": "Hơn 40 loại lá rừng tươi sạch cuộn thịt ba chỉ tôm luộc bì heo chấm nước sốt mẻ nếp hạt tiêu cay nồng béo bùi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "kon tum",
+      "gỏi lá kon tum",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F098",
+    "name": "Cơm lam gà nướng Kon Plông",
+    "destination": "Kon Tum",
+    "description": "Gà thả đồi ướp lá tiêu rừng nướng than hoa thơm nức ăn cùng cơm nếp nương trong ống tre dẻo mềm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "kon tum",
+      "gà nướng cơm lam",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F099",
+    "name": "Cà phê Đăk Hà",
+    "destination": "Kon Tum",
+    "description": "Hạt cà phê vùng đất đỏ bazan thơm nồng đậm đà vị đắng nguyên chất mạnh mẽ của đại ngàn Tây Nguyên.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "kon tum",
+      "cà phê đăk hà",
+      "cà phê & trà"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F100",
+    "name": "Pa pỉnh tộp (Cá suối nướng gập)",
+    "destination": "Lai Châu",
+    "description": "Cá chép cá trôi suối mổ lưng ướp mắc khén ớt gừng kẹp tre nướng than hồng thơm ngọt béo đậm đà vị Thái.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lai châu",
+      "pa pỉnh tộp",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F101",
+    "name": "Thịt lợn cắp nách Lai Châu",
+    "destination": "Lai Châu",
+    "description": "Lợn bản nuôi tự nhiên thịt thơm chắc nướng cả con hoặc luộc chấm chẩm chéo cay nồng thơm ngát.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lai châu",
+      "thịt lợn cắp nách",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F102",
+    "name": "Măng đắng xào thịt bò",
+    "destination": "Lai Châu",
+    "description": "Măng rừng vị đắng the thanh mát luộc xào cùng thịt bò mềm hoặc nướng tro chấm muối ớt rừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lai châu",
+      "măng đắng lai châu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F103",
+    "name": "Canh chua cá chốt bông so đũa",
+    "destination": "Long An",
+    "description": "Cá chốt béo ngậy nấu canh chua cơm mẻ cùng bông so đũa giòn ngọt thanh tao đậm chất miền Tây.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "long an",
+      "canh chua cá chốt",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F104",
+    "name": "Lạp xưởng tươi Cần Đước",
+    "destination": "Long An",
+    "description": "Lạp xưởng làm từ thịt heo tươi ướp rượu mai quế lộ phơi nắng gió tự nhiên chua ngọt đậm đà thơm béo.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "long an",
+      "lạp xưởng tươi cần đước",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F105",
+    "name": "Gạo nàng thơm Chợ Đào",
+    "destination": "Long An",
+    "description": "Hạt gạo ngọc trời dẻo thơm hạt bóng nấu cơm thơm phức ngát hương trù phú đồng bằng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "long an",
+      "gạo nàng thơm chợ đào",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F106",
+    "name": "Thắng cố ngựa Bắc Hà",
+    "destination": "Lào Cai",
+    "description": "Món canh truyền thống của đồng bào H'Mông nấu từ lục phủ ngũ tạng ngựa cùng thảo quả quế hồi trên chảo lớn.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lào cai",
+      "thắng cố",
+      "sa pa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F107",
+    "name": "Lẩu cá hồi Sa Pa",
+    "destination": "Lào Cai",
+    "description": "Cá hồi nuôi nước lạnh tươi roi rói thái lát mỏng nhúng lẩu chua cay ăn cùng các loại rau rừng tươi non.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lào cai",
+      "cá hồi",
+      "sa pa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F108",
+    "name": "Thịt lợn cắp nách nướng than",
+    "destination": "Lào Cai",
+    "description": "Lợn bản thả rông thịt săn chắc, nướng nguyên con da giòn tan chấm muối tiêu hạt dổi mắc khén.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lào cai",
+      "thịt lợn cắp nách",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F109",
+    "name": "Cơm lam nướng chấm muối vừng",
+    "destination": "Lào Cai",
+    "description": "Gạo nếp nương thơm dẻo nướng trong ống tre nứa thơm hương khói, chấm muối mè bùi béo.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "lào cai",
+      "cơm lam",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F110",
+    "name": "Rau cải mèo xào thịt bò",
+    "destination": "Lào Cai",
+    "description": "Cải mèo vùng cao vị đắng the nhẹ ngọt hậu, xào lăn thịt bò mềm thơm ngậy.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lào cai",
+      "rau cải mèo",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F111",
+    "name": "Bánh tráng nướng Đà Lạt",
+    "destination": "Lâm Đồng",
+    "description": "Pizza Việt Nam nướng trên than hồng với trứng gà, phô mai, xúc xích, khô bò, hành lá và tương ớt cay nồng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "lâm đồng",
+      "bánh tráng nướng",
+      "đà lạt",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F112",
+    "name": "Lẩu gà lá é Đà Lạt",
+    "destination": "Lâm Đồng",
+    "description": "Nồi lẩu thơm lừng thịt gà ta ngọt mềm nấu cùng măng tươi và lá é the the cay ấm giữa không khí lạnh cao nguyên.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lâm đồng",
+      "lẩu gà lá é",
+      "đà lạt",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F113",
+    "name": "Bánh ướt lòng gà",
+    "destination": "Lâm Đồng",
+    "description": "Bánh ướt mềm mượt ăn kèm lòng heo dai giòn, thịt gà xé phay bóp rau răm chấm nước mắm tỏi ớt chua ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lâm đồng",
+      "bánh ướt lòng gà",
+      "đà lạt",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F114",
+    "name": "Kem bơ sáp Đà Lạt",
+    "destination": "Lâm Đồng",
+    "description": "Bơ sáp béo ngậy xay mịn màng hòa cùng viên kem dừa ngọt mát và dừa sấy giòn tan.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "lâm đồng",
+      "kem bơ",
+      "tráng miệng",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F115",
+    "name": "Cà phê Arabica Cầu Đất",
+    "destination": "Lâm Đồng",
+    "description": "Hương vị cà phê thượng hạng trồng ở độ cao 1600m với vị chua thanh quý phái và hậu vị ngọt sâu.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "lâm đồng",
+      "cà phê arabica",
+      "cầu đất",
+      "cà phê & trà"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F116",
+    "name": "Vịt quay lá mắc mật Lạng Sơn",
+    "destination": "Lạng Sơn",
+    "description": "Vịt bầu Thất Khê nhồi lá mắc mật mạch nha nướng than hoa da vàng giòn rụm chấm nước sốt vịt cay thơm ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lạng sơn",
+      "vịt quay lá mắc mật",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F117",
+    "name": "Khâu nhục Lạng Sơn",
+    "destination": "Lạng Sơn",
+    "description": "Thịt ba chỉ luộc sơ châm kim quay giòn rồi hấp cách thủy cùng khoai môn mộc nhĩ gia vị mềm rục béo ngậy.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "lạng sơn",
+      "khâu nhục lạng sơn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F118",
+    "name": "Phở chua Lạng Sơn",
+    "destination": "Lạng Sơn",
+    "description": "Phở nguội trộn thịt xá xíu vịt quay khoai lang chiên giòn rưới nước giấm đường cay ngọt thanh tao cuốn hút.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "lạng sơn",
+      "phở chua lạng sơn",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F119",
+    "name": "Phở bò Nam Định",
+    "destination": "Nam Đinh",
+    "description": "Nước dùng phở ninh từ xương ống bò tủy béo ngậy dậy mùi gừng nướng nước mắm ngon và thịt bò tái lăn mềm ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "nam đinh",
+      "phở bò nam định",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F120",
+    "name": "Nem nắm Giao Thủy",
+    "destination": "Nam Đinh",
+    "description": "Thịt nạc mông và bì heo thái chỉ bóp cùng thính gạo rang thơm lừng gói lá chuối chấm nước mắm Sa Châu hạt tiêu.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "nam đinh",
+      "nem nắm giao thủy",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F121",
+    "name": "Kẹo Sìu Châu Nam Định",
+    "destination": "Nam Đinh",
+    "description": "Kẹo lạc vừng giòn tan bùi ngậy nấu bằng mạch nha đường kính trắng ngọt thanh không dính răng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "nam đinh",
+      "kẹo sìu châu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F122",
+    "name": "Cháo lươn xứ Nghệ",
+    "destination": "Nghệ An",
+    "description": "Lươn đồng xào nghệ sả ớt cay nồng đậm đà nấu cùng cháo gạo nhừ thơm lừng hành tăm xứ Nghệ.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "nghệ an",
+      "cháo lươn xứ nghệ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F123",
+    "name": "Súp lươn ăn kèm bánh mì",
+    "destination": "Nghệ An",
+    "description": "Bát súp lươn đỏ au cay the nồng nàn thơm mùi rau răm ăn cùng bánh mì nướng giòn hoặc bánh mướt mềm mịn.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "nghệ an",
+      "súp lươn nghệ an",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F124",
+    "name": "Tương Nam Đàn",
+    "destination": "Nghệ An",
+    "description": "Tương đỗ tương nếp ủ thủ công ba tầng màu hổ phách ngọt thơm dùng chấm rau muống luộc hay kho cá đồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "nghệ an",
+      "tương nam đàn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F125",
+    "name": "Thịt dê núi Ninh Bình",
+    "destination": "Ninh Bình",
+    "description": "Dê núi chạy nhảy ăn lá thuốc tự nhiên thịt săn chắc, chế biến thành tái dê chanh, dê nướng tảng thơm lừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh bình",
+      "thịt dê núi",
+      "tái dê",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F126",
+    "name": "Cơm cháy chà bông Ninh Bình",
+    "destination": "Ninh Bình",
+    "description": "Miếng cơm cháy giòn rụm vàng ươm rưới nước sốt tim cật hoặc sốt thịt dê béo ngậy sóng sánh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh bình",
+      "cơm cháy",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F127",
+    "name": "Ốc núi Tam Điệp",
+    "destination": "Ninh Bình",
+    "description": "Ốc núi mùa mưa ăn rong rêu cây thuốc, luộc sả ớt hoặc xào me thịt giòn ngọt thanh lạ miệng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh bình",
+      "ốc núi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F128",
+    "name": "Gỏi cá nhệch Kim Sơn",
+    "destination": "Ninh Bình",
+    "description": "Cá nhệch tươi trộn thính gạo rang vàng, quấn lá sung chấm chẻo nóng thơm cay béo bùi độc nhất vô nhị.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh bình",
+      "gỏi cá nhệch",
+      "kim sơn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F129",
+    "name": "Rượu cần Nho Quan",
+    "destination": "Ninh Bình",
+    "description": "Loại rượu men lá ủ chum đất của đồng bào Mường, vị cay nồng ngọt dịu thơm hương núi rừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh bình",
+      "rượu cần",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F130",
+    "name": "Nho Ninh Thuận",
+    "destination": "Ninh Thuận",
+    "description": "Trái nho đỏ nho xanh mọng nước vị ngọt thanh chua dịu phát triển tươi tốt trên vùng đất nắng gió Phan Rang.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh thuận",
+      "nho ninh thuận",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F131",
+    "name": "Cừu nướng Phan Rang",
+    "destination": "Ninh Thuận",
+    "description": "Thịt cừu chăn thả thảo nguyên đồi cát tẩm ướp gia vị thảo mộc nướng than hoa thơm ngọt mềm không hôi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "ninh thuận",
+      "cừu nướng phan rang",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F132",
+    "name": "Bánh căn bánh xèo Phan Rang",
+    "destination": "Ninh Thuận",
+    "description": "Bánh căn khuôn đất nướng giòn đáy nhân tôm mực tươi ăn cùng 4 loại nước chấm mắm nêm, mắm đậu phộng, mắm ớt và mắm cà chua.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "ninh thuận",
+      "bánh căn phan rang",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F133",
+    "name": "Thịt chua Thanh Sơn",
+    "destination": "Phú Thọ",
+    "description": "Thịt lợn lửng nướng chín tái ủ lên men tự nhiên với thính gạo ngô trong ống nứa cuốn lá ổi lá sung chát ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "phú thọ",
+      "thịt chua thanh sơn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F134",
+    "name": "Cọ ỏm Phú Thọ",
+    "destination": "Phú Thọ",
+    "description": "Trái cọ già ỏm nước ấm vừa độ vỏ đen mềm dẻo ngậy vàng óng chấm nước mắm hoặc muối vừng bùi béo.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "phú thọ",
+      "cọ ỏm phú thọ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F135",
+    "name": "Bánh tai Phú Thọ",
+    "destination": "Phú Thọ",
+    "description": "Bánh bột gạo tẻ nặn hình vành tai bọc nhân thịt lợn tiêu hành hấp chín mềm thơm ngậy.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "phú thọ",
+      "bánh tai phú thọ",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F136",
+    "name": "Mắt cá ngừ đại dương hầm thuốc bắc",
+    "destination": "Phú Yên",
+    "description": "Mắt cá ngừ to tròn hầm trong thố đất cùng kỷ tử, táo đỏ, ớt hiểm cho vị ngọt béo ngậy bổ dưỡng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "phú yên",
+      "mắt cá ngừ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F137",
+    "name": "Bánh hỏi lòng heo Phú Yên",
+    "destination": "Phú Yên",
+    "description": "Bánh hỏi sợi nhuyễn thoa mỡ hẹ xanh mướt ăn cùng đĩa lòng heo tươi luộc giòn ngọt và chén cháo nóng hổi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "phú yên",
+      "bánh hỏi lòng heo",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F138",
+    "name": "Sò huyết đầm Ô Loan",
+    "destination": "Phú Yên",
+    "description": "Sò huyết đỏ tươi béo múp nướng mọi hoặc xào me xốt tỏi, ngọt đậm đà danh bất hư truyền.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "phú yên",
+      "sò huyết",
+      "đầm ô loan",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F139",
+    "name": "Bò một nắng muối kiến vàng",
+    "destination": "Phú Yên",
+    "description": "Thịt bắp bò cỏ tẩm ướp phơi sương nướng than hồng, xé chấm muối kiến vàng Krông Pa chua cay nổ lách tách.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "phú yên",
+      "bò một nắng",
+      "muối kiến vàng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F140",
+    "name": "Chả dông Tuy Hòa",
+    "destination": "Phú Yên",
+    "description": "Thịt dông cát băm nhuyễn ướp gia vị cuốn bánh tráng chiên vàng ruộm giòn tan chấm nước mắm ớt tỏi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "phú yên",
+      "chả dông",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F141",
+    "name": "Chả mực giã tay Hạ Long",
+    "destination": "Quang Ninh",
+    "description": "Mực mai tươi giã tay giòn sần sật chiên vàng, ăn kèm xôi trắng hoặc bánh cuốn nước mắm tỏi ớt.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "chả mực",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F142",
+    "name": "Bún bề bề bóc nõn",
+    "destination": "Quang Ninh",
+    "description": "Bề bề biển tươi ngọt lịm kết hợp nước dùng hải sản đậm đà thanh mát.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "bún bề bề",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F143",
+    "name": "Sá sùng xào tỏi nướng mọi",
+    "destination": "Quang Ninh",
+    "description": "Món hải sản tiến vua đặc sản biển đảo Quan Lạn giòn dai ngọt đậm.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "sá sùng",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F144",
+    "name": "Sam biển nướng mỡ hành",
+    "destination": "Quang Ninh",
+    "description": "Thịt sam biển ngọt thơm, nướng mỡ hành hoặc làm gỏi chua cay đặc sắc.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "sam biển",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F145",
+    "name": "Sữa chua trân châu cốt dừa",
+    "destination": "Quang Ninh",
+    "description": "Món tráng miệng nổi tiếng kết hợp sữa chua nhà làm dẻo mịn và trân châu cốt dừa nóng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "sữa chua trân châu",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F146",
+    "name": "Cháo canh cá lóc Quảng Bình",
+    "destination": "Quảng Bình",
+    "description": "Sợi bột mì hoặc bột gạo nhào nặn thủ công chan nước hầm cá lóc đồng ngọt thanh rắc hành răm thơm cay.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng bình",
+      "cháo canh",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F147",
+    "name": "Bánh bột lọc bột sắn Quảng Bình",
+    "destination": "Quảng Bình",
+    "description": "Vỏ bánh trong veo dai mềm làm từ sắn lọc nhân tôm sông rim thịt mỡ đậm đà chấm nước mắm ruốc ớt hiểm cay xé lưỡi.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "quảng bình",
+      "bánh bột lọc",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F148",
+    "name": "Đẻn biển hầm nướng than hoa",
+    "destination": "Quảng Bình",
+    "description": "Loài rắn biển quý hiếm thịt bổ dưỡng nướng than hoa hoặc ram đẻn giòn rụm đặc sắc vùng cát trắng.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng bình",
+      "đẻn biển",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F149",
+    "name": "Lẩu cá khoai Quảng Bình",
+    "destination": "Quảng Bình",
+    "description": "Cá khoai thịt trắng mềm như tuyết nhúng lẩu cà chua thì là măng chua thơm ấm béo ngậy ngọt ngào.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng bình",
+      "lẩu cá khoai",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F150",
+    "name": "Khoai deo Hải Ninh",
+    "destination": "Quảng Bình",
+    "description": "Củ khoai lang đỏ phơi nắng gió biển dẻo quánh ngọt lịm thơm tự nhiên, món quà quê dung dị miền Trung.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng bình",
+      "khoai deo",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F151",
+    "name": "Cao lầu Hội An",
+    "destination": "Quảng Nam",
+    "description": "Món mì độc nhất vô nhị chế biến từ nước giếng Bá Lễ với thịt xá xíu đậm đà, tóp mỡ giòn và rau đắng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng nam",
+      "cao lầu",
+      "hội an",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F152",
+    "name": "Cơm gà Tam Kỳ",
+    "destination": "Quảng Nam",
+    "description": "Cơm nấu nước luộc gà vàng ươm thơm béo ăn cùng thịt gà ta thả vườn dai ngọt xé phay bóp rau răm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng nam",
+      "cơm gà",
+      "tam kỳ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F153",
+    "name": "Bánh mì Phượng Hội An",
+    "destination": "Quảng Nam",
+    "description": "Ổ bánh mì nức tiếng thế giới kẹp hàng chục loại nhân tươi ngon, pate thơm lừng và nước sốt đặc trưng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "quảng nam",
+      "bánh mì",
+      "hội an",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F154",
+    "name": "Bánh đập hến xào Cẩm Nam",
+    "destination": "Quảng Nam",
+    "description": "Bánh ướt dẻo bọc bánh tráng nướng đập dập chấm mắm nêm, ăn kèm đĩa hến xào hành răm xúc giòn rụm.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "quảng nam",
+      "bánh đập",
+      "hến xào",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F155",
+    "name": "Bê thui Cầu Mống",
+    "destination": "Quảng Nam",
+    "description": "Thịt bê thui chín tái ngọt mềm, lớp da vàng giòn trong suốt, cuốn bánh tráng rau sống chấm mắm cá cơm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng nam",
+      "bê thui cầu mống",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F156",
+    "name": "Don Quảng Ngãi",
+    "destination": "Quảng Ngãi",
+    "description": "Món don sông Trà đun nước ngọt lịm ăn cùng bánh tráng gạo nướng giòn bẻ nhỏ ớt xiêm cay xé lưỡi ấm bụng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng ngãi",
+      "don quảng ngãi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F157",
+    "name": "Cá bống sông Trà kho tiêu",
+    "destination": "Quảng Ngãi",
+    "description": "Cá bống cát tươi sống kho quéo trong tộ đất cùng tiêu ớt nước mắm thơm phức đưa cơm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng ngãi",
+      "cá bống sông trà",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F158",
+    "name": "Kẹo gương đậu phụng",
+    "destination": "Quảng Ngãi",
+    "description": "Miếng kẹo mỏng tang trong suốt như gương giòn rụm phủ đậu phộng và vừng thơm bùi ngọt ngào.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng ngãi",
+      "kẹo gương quảng ngãi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F159",
+    "name": "Chả mực giã tay Hạ Long",
+    "destination": "Quảng Ninh",
+    "description": "Mực mai tươi sống giã tay công phu cho độ giòn sần sật đỉnh cao, chiên vàng ươm ăn kèm xôi trắng hoặc bánh cuốn.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "chả mực giã tay",
+      "hạ long",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F160",
+    "name": "Bún bề bề Hạ Long",
+    "destination": "Quảng Ninh",
+    "description": "Tô bún chan nước dùng ngọt lịm từ vỏ tôm cua, ngập tràn thịt bề bề bóc nõn tươi rói, tôm sú và rau cải.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "bún bề bề",
+      "hạ long",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F161",
+    "name": "Sá sùng Quan Lạn",
+    "destination": "Quảng Ninh",
+    "description": "Hải sản quý hiếm vùng biển đảo đảo Quan Lạn, nướng giòn ngọt lịm hoặc dùng nấu nước phở cho vị ngọt thanh tự nhiên.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "sá sùng",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F162",
+    "name": "Ngán biển hấp xào rượu",
+    "destination": "Quảng Ninh",
+    "description": "Con ngán béo tròn nhiều dinh dưỡng, nướng mọi hoặc hấp sả rượu thơm ngất ngây.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "ngán biển",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F163",
+    "name": "Sữa chua trân châu Hạ Long",
+    "destination": "Quảng Ninh",
+    "description": "Sữa chua sánh mịn mát rượi ăn cùng bát trân châu nóng dẻo ngập tràn nước cốt dừa béo bùi.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "quảng ninh",
+      "sữa chua trân châu",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F164",
+    "name": "Bánh bột lọc Mỹ Chánh",
+    "destination": "Quảng Trị",
+    "description": "Vỏ bánh bột sắn lọc trong suốt dẻo mềm nhân tôm thịt rim cay mặn chấm nước mắm nguyên chất ớt xanh cay nồng.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "quảng trị",
+      "bánh lọc mỹ chánh",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F165",
+    "name": "Cháo cá vạt giường (Bánh canh cá lóc)",
+    "destination": "Quảng Trị",
+    "description": "Sợi bánh canh bột gạo sợi cắt thẳng chan nước cá lóc đồng ngọt thanh thơm lừng củ nén cay ấm nồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng trị",
+      "cháo cá vạt giường",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F166",
+    "name": "Thịt trâu lá trơng",
+    "destination": "Quảng Trị",
+    "description": "Thịt trâu non ngọt mềm xào hoặc nướng cùng lá trơng rừng the nồng tạo hương vị cay ấm độc nhất vô nhị.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "quảng trị",
+      "thịt trâu lá trơng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F167",
+    "name": "Bánh pía Sóc Trăng",
+    "destination": "Sóc Trăng",
+    "description": "Vỏ bánh ngàn lớp mỏng tang thơm nức bao bọc nhân đậu xanh sầu riêng trứng muối béo ngậy ngọt lịm.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "sóc trăng",
+      "bánh pía sóc trăng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F168",
+    "name": "Bún nước lèo Sóc Trăng",
+    "destination": "Sóc Trăng",
+    "description": "Nước lèo nấu từ mắm cá bò hóc sả ngải bún thanh trong ngọt lịm ăn cùng cá lóc luộc rút xương và tôm đất tươi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "sóc trăng",
+      "bún nước lèo sóc trăng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F169",
+    "name": "Bánh cóng Đại Tâm",
+    "destination": "Sóc Trăng",
+    "description": "Bánh cống chiên giòn rụm nhân đậu xanh thịt băm phủ con tôm sú tươi chấm mắm tỏi ớt chua ngọt.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "sóc trăng",
+      "bánh cóng đại tâm",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F170",
+    "name": "Thịt trâu gác bếp Sơn La",
+    "destination": "Sơn La",
+    "description": "Thịt bắp trâu tươi ướp ớt tỏi mắc khén sấy khô trên khói củi nhãn, xé sợi dai ngọt đậm đà hương vị Tây Bắc.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "sơn la",
+      "thịt trâu gác bếp",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F171",
+    "name": "Nộm da trâu Mộc Châu",
+    "destination": "Sơn La",
+    "description": "Da trâu hơ lửa làm sạch luộc thái mỏng giòn sần sật bóp chua cùng nước măng chua hoa chuối và rau rừng đậu phộng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "sơn la",
+      "nộm da trâu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F172",
+    "name": "Chè Mộc Châu",
+    "destination": "Sơn La",
+    "description": "Búp chè Shan Tuyết cổ thụ chắt lọc sương sớm cao nguyên thơm ngát tiền chát hậu ngọt sâu lắng.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "sơn la",
+      "chè mộc châu",
+      "cà phê & trà"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F173",
+    "name": "Cơm tấm Sài Gòn",
+    "destination": "TP. Hồ Chí Minh",
+    "description": "Đĩa cơm tấm hạt tơi với sườn nướng mật ong vàng ruộm, bì dai giòn, chả trứng và nước mắm ớt kẹo.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tp. hồ chí minh",
+      "cơm tấm",
+      "sườn bì chả",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F174",
+    "name": "Bánh mì Sài Gòn",
+    "destination": "TP. Hồ Chí Minh",
+    "description": "Ổ bánh mì vỏ giòn xốp kẹp đầy ắp pate béo ngậy, thịt nguội, giò lụa, dưa leo, ngò rí và ớt cay.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "tp. hồ chí minh",
+      "bánh mì",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F175",
+    "name": "Hủ tiếu Nam Vang",
+    "destination": "TP. Hồ Chí Minh",
+    "description": "Tô hủ tiếu dai dai với tôm sú tươi, thịt băm, gan heo, trứng cút cùng nước lèo hầm xương đậm đà.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tp. hồ chí minh",
+      "hủ tiếu nam vang",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F176",
+    "name": "Phá lấu lòng bò",
+    "destination": "TP. Hồ Chí Minh",
+    "description": "Món ăn vặt trứ danh với lòng bò mềm thấm đẫm nước cốt dừa béo bùi, ngũ vị hương và bánh mì chấm giòn.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "tp. hồ chí minh",
+      "phá lấu",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F177",
+    "name": "Cà phê sữa đá Sài Gòn",
+    "destination": "TP. Hồ Chí Minh",
+    "description": "Hương vị cà phê Robusta đậm chất phố thị pha sữa đặc thơm ngọt, uống cùng đá lạnh mát lạnh sảng khoái.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "tp. hồ chí minh",
+      "cà phê sữa đá",
+      "cà phê & trà"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F178",
+    "name": "Nem chua Thanh Hóa",
+    "destination": "Thanh Hóa",
+    "description": "Thịt lợn nạc bì thái chỉ lên men thính gạo gói lá chuối cùng tỏi ớt đinh lăng vị chua thanh giòn sần sật chấm tương ớt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thanh hóa",
+      "nem chua thanh hóa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F179",
+    "name": "Chả tôm Thanh Hóa",
+    "destination": "Thanh Hóa",
+    "description": "Tôm tươi giã tay xào thịt ba chỉ cuốn bánh phở mỏng kẹp nẹp tre nướng than hoa thơm lừng chấm nước mắm đu đủ.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "thanh hóa",
+      "chả tôm thanh hóa",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F180",
+    "name": "Bánh cu đúp (Bánh gai Tứ Trụ)",
+    "destination": "Thanh Hóa",
+    "description": "Bánh gai dẻo mềm đen óng nhân đậu xanh dừa nạo thịt mỡ hạt sen béo bùi gói lá chuối khô thơm ngọt.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thanh hóa",
+      "bánh gai tứ trụ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F181",
+    "name": "Bánh cáy Làng Nguyễn",
+    "destination": "Thái Bình",
+    "description": "Bánh nếp dẻo thơm nấu mạch nha đường kính kẹp mứt bí vừng lạc xốp giòn cay the gừng tươi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thái bình",
+      "bánh cáy làng nguyễn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F182",
+    "name": "Canh cá Quỳnh Côi",
+    "destination": "Thái Bình",
+    "description": "Cá quả hoặc cá trôi nướng gỡ thịt xào thơm rim nước mắm chan cùng sợi bánh đa sợi nhỏ và rau cải đắng ngọt thanh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thái bình",
+      "canh cá quỳnh côi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F183",
+    "name": "Bún bung hoa chuối",
+    "destination": "Thái Bình",
+    "description": "Bún nấu sườn heo móng giò cùng hoa chuối thái mỏng nước dùng ngọt bùi thơm mùi mẻ đậm chất thôn quê.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thái bình",
+      "bún bung hoa chuối",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F184",
+    "name": "Trà Tân Cương Thái Nguyên",
+    "destination": "Thái Nguyên",
+    "description": "Đệ nhất danh trà búp nõn tôm sao suốt cánh xoăn tít màu mốc cau nước xanh ánh vàng thơm hương cốm ngọt sâu.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "thái nguyên",
+      "trà tân cương",
+      "cà phê & trà"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F185",
+    "name": "Nem chua Đại Từ",
+    "destination": "Thái Nguyên",
+    "description": "Nem thịt heo gói lá chuối nướng chín trên than hoa khác biệt vị chua bùi thơm ngậy béo ngậy khó quên.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thái nguyên",
+      "nem chua đại từ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F186",
+    "name": "Bánh chưng Bờ Đậu",
+    "destination": "Thái Nguyên",
+    "description": "Bánh chưng nếp nương lá dong rừng Định Hóa luộc nước giếng ngầm dẻo rền nhân thịt mỡ đậu xanh thơm phức.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thái nguyên",
+      "bánh chưng bờ đậu",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F187",
+    "name": "Bún bò Huế",
+    "destination": "Thừa Thiên Huế",
+    "description": "Tô bún bò chân giò nước lèo cay nồng thơm mùi sả ruốc, chả cua giòn ngọt và huyết heo mềm mịn.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thừa thiên huế",
+      "bún bò huế",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F188",
+    "name": "Cơm hến Huế",
+    "destination": "Thừa Thiên Huế",
+    "description": "Cơm nguội trộn thịt hến xào đậm đà, tóp mỡ giòn rụm, mắm ruốc thơm nức, hoa chuối thái mỏng và đậu phộng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thừa thiên huế",
+      "cơm hến",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F189",
+    "name": "Bộ ba Bánh bèo - nậm - lọc",
+    "destination": "Thừa Thiên Huế",
+    "description": "Các món bánh cung đình mỏng mịn, nhân tôm thịt đậm đà gói lá chuối thơm nức chấm nước mắm ruốc ngọt.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "thừa thiên huế",
+      "bánh bèo",
+      "bánh bột lọc",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F190",
+    "name": "Nem lụi nướng than hoa",
+    "destination": "Thừa Thiên Huế",
+    "description": "Nem thịt heo quết dẻo cuốn củ sả nướng trên than hồng, chấm nước lèo mè đậu phộng gia truyền đặc sánh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "thừa thiên huế",
+      "nem lụi",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F191",
+    "name": "Chè bột lọc heo quay",
+    "destination": "Thừa Thiên Huế",
+    "description": "Sự kết hợp độc đáo giữa viên bột lọc dai dai bọc thịt heo quay mặn béo ngậy hòa cùng nước đường gừng thơm ấm.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "thừa thiên huế",
+      "chè heo quay",
+      "chè huế",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F192",
+    "name": "Hủ tiếu Mỹ Tho",
+    "destination": "Tiền Giang",
+    "description": "Sợi hủ tiếu dai giòn độc đáo từ gạo Gò Cát chan nước hầm xương tủy tôm khô thơm ngọt thịt xá xíu tim gan tươi.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tiền giang",
+      "hủ tiếu mỹ tho",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F193",
+    "name": "Bánh giá Chợ Giồng",
+    "destination": "Tiền Giang",
+    "description": "Bánh chiên giòn tan nhân tôm đất giá đỗ thịt heo đậu phộng ăn kèm rau sống chấm nước mắm tỏi ớt.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "tiền giang",
+      "bánh giá chợ giồng",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F194",
+    "name": "Vú sữa Lò Rèn Vĩnh Kim",
+    "destination": "Tiền Giang",
+    "description": "Quả tròn căng bóng mỏng vỏ dòng sữa trắng đục ngọt lịm thơm béo mát lành đệ nhất trái cây miền Tây.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tiền giang",
+      "vú sữa lò rèn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F195",
+    "name": "Bún nước lèo Trà Vinh",
+    "destination": "Trà Vinh",
+    "description": "Tô bún đậm đà mắm bò hóc cá lóc đồng phi lê luộc rút xương ăn cùng huyết heo thịt heo quay giòn rụm và rau ghém.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "trà vinh",
+      "bún nước lèo trà vinh",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F196",
+    "name": "Bánh tét Trà Cuôn",
+    "destination": "Trà Vinh",
+    "description": "Bánh tét màu xanh lá ngót đỏ gấc tím nếp nương nhân thịt mỡ đậu xanh trứng muối dẻo rền thơm nức tiếng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "trà vinh",
+      "bánh tét trà cuôn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F197",
+    "name": "Dừa sáp Cầu Kè",
+    "destination": "Trà Vinh",
+    "description": "Đặc sản hiếm có với cùi dừa dày xốp dẻo quánh nước sệt béo ngậy xay sinh tố ngậy bùi thơm lừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "trà vinh",
+      "dừa sáp cầu kè",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F198",
+    "name": "Thịt lợn đen Na Hang nướng",
+    "destination": "Tuyên Quang",
+    "description": "Thịt lợn đen vùng cao chăn thả tự nhiên thịt ngọt săn chắc tẩm ướp hạt dổi mắc khén nướng than thơm nức.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tuyên quang",
+      "thịt lợn đen na hang",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F199",
+    "name": "Cá bỗng sông Lô",
+    "destination": "Tuyên Quang",
+    "description": "Cá bỗng quý hiếm thịt chắc ngọt xào măng chua hoặc nướng lá chanh da giòn béo ngậy tiến vua.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tuyên quang",
+      "cá bỗng sông lô",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F200",
+    "name": "Rượu ngô Na Hang",
+    "destination": "Tuyên Quang",
+    "description": "Rượu nấu từ hạt ngô ủ men lá thảo dược rừng hơn 20 vị êm say thơm ngát hương núi rừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tuyên quang",
+      "rượu ngô na hang",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F201",
+    "name": "Bánh tráng phơi sương Trảng Bàng",
+    "destination": "Tây Ninh",
+    "description": "Bánh tráng gạo dày dẻo phơi sương đêm cuốn thịt bắp luộc cùng hơn chục loại rau rừng chấm mắm nêm đậm đà.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tây ninh",
+      "bánh tráng phơi sương trảng bàng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F202",
+    "name": "Bò tơ Tây Ninh nướng tảng",
+    "destination": "Tây Ninh",
+    "description": "Thịt bò tơ non tơ ngọt mềm tẩm ướp gia vị nướng trên than hồng cuốn bánh tráng rau rừng chấm mắm mỡ hành.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tây ninh",
+      "bò tơ tây ninh",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F203",
+    "name": "Muối tôm Tây Ninh",
+    "destination": "Tây Ninh",
+    "description": "Hạt muối đỏ au giòn thơm kết hợp tôm khô ớt cay nồng tỏi thơm chấm trái cây giòn ngọt đê mê.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "tây ninh",
+      "muối tôm tây ninh",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F204",
+    "name": "Khoai lang hầm dừa Bình Tân",
+    "destination": "Vĩnh Long",
+    "description": "Khoai lang tím bở bùi hầm cùng nước cốt dừa sánh béo rắc đậu phộng thơm bùi ngọt dịu.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "vĩnh long",
+      "khoai lang hầm dừa",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F205",
+    "name": "Cá tai tượng chiên xù",
+    "destination": "Vĩnh Long",
+    "description": "Con cá tai tượng tươi sống chiên ngập dầu vảy dựng ngược giòn tan cuốn bánh tráng rau sống chấm mắm me.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "vĩnh long",
+      "cá tai tượng chiên xù",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F206",
+    "name": "Bưởi năm roi Bình Minh",
+    "destination": "Vĩnh Long",
+    "description": "Trái bưởi da xanh vàng tép mọng nước ngọt thanh dịu không hạt đặc sản miệt vườn phù sa.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "vĩnh long",
+      "bưởi năm roi bình minh",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F207",
+    "name": "Ngọn su su Tam Đảo xào tỏi",
+    "destination": "Vĩnh Phúc",
+    "description": "Đọt su su non xanh mướt mọc giữa sương mù Tam Đảo xào tỏi giòn sần sật ngọt mát tự nhiên.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "vĩnh phúc",
+      "ngọn su su tam đảo",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F208",
+    "name": "Thịt bò tái kiến đốt Tam Đảo",
+    "destination": "Vĩnh Phúc",
+    "description": "Miếng thịt bò tươi treo tổ kiến rừng cho kiến đốt tạo vị chua chát thơm đặc biệt rồi nướng than hoa.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "vĩnh phúc",
+      "thịt bò tái kiến đốt",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F209",
+    "name": "Cá thính Lập Thạch",
+    "destination": "Vĩnh Phúc",
+    "description": "Cá chép cá mè ủ muối thính ngô rang lên men tự nhiên nướng kẹp than hoa thơm bùi đậm vị.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "vĩnh phúc",
+      "cá thính lập thạch",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F210",
+    "name": "Thịt trâu sấy Mù Cang Chải",
+    "destination": "Yên Bái",
+    "description": "Thịt bắp trâu bản ướp mắc khén gừng ớt hun khói củi thông trên gác bếp dẻo ngọt đậm đà vùng cao.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "yên bái",
+      "thịt trâu sấy",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F211",
+    "name": "Xôi ngũ sắc nếp Tú Lệ",
+    "destination": "Yên Bái",
+    "description": "Gạo nếp nương Tú Lệ trứ danh hạt tròn mẩy nhuộm 5 màu lá cây rừng dẻo thơm nức mũi chấm muối vừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "yên bái",
+      "xôi ngũ sắc tú lệ",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F212",
+    "name": "Măng sặt Yên Bái luộc",
+    "destination": "Yên Bái",
+    "description": "Măng sặt non giòn ngọt hái trên núi cao luộc chấm mẻ ớt hoặc xào thịt bò thơm ngọt mát lành.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "yên bái",
+      "măng sặt yên bái",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F213",
+    "name": "Gà nướng mắc khén Điện Biên",
+    "destination": "Điện Biên",
+    "description": "Gà bản thả đồi ướp hạt mắc khén ớt gừng rau thơm kẹp que tre nướng vàng da giòn rụm thơm nồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "điện biên",
+      "gà nướng mắc khén",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F214",
+    "name": "Thịt lợn bản hun khói",
+    "destination": "Điện Biên",
+    "description": "Thịt lợn ba chỉ ướp gia vị vùng cao hun khói bếp củi thơm ngậy xào tỏi hoặc ăn cùng xôi nếp.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "điện biên",
+      "thịt lợn hun khói",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F215",
+    "name": "Xôi nếp nương Điện Biên",
+    "destination": "Điện Biên",
+    "description": "Hạt gạo nếp nương đồ chõ gỗ dẻo mềm thơm phức béo bùi ăn kèm muối vừng hay thịt nướng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "điện biên",
+      "xôi nếp nương điện biên",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F216",
+    "name": "Mì Quảng Đà Nẵng",
+    "destination": "Đà Nẵng",
+    "description": "Sợi mì vàng óng dai mềm với nhân tôm thịt đậm đà, nước dùng xâm xấp, bánh tráng nướng giòn và rau sống.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đà nẵng",
+      "mì quảng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F217",
+    "name": "Bánh tráng cuốn thịt heo hai đầu da",
+    "destination": "Đà Nẵng",
+    "description": "Lát thịt heo luộc mỡ nạc đan xen cuốn cùng bánh tráng Đại Lộc, rau thơm đủ loại chấm mắm nêm cay nồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đà nẵng",
+      "bánh tráng cuốn",
+      "thịt heo hai đầu da",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F218",
+    "name": "Bún chả cá Đà Nẵng",
+    "destination": "Đà Nẵng",
+    "description": "Chả cá thác lác chiên hấp thơm ngọt tự nhiên trong nước lèo bí đỏ, bắp cải và cà chua thanh mát.",
+    "food_type": "hải sản tươi sống",
+    "image": null,
+    "tags": [
+      "đà nẵng",
+      "bún chả cá",
+      "hải sản tươi sống"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F219",
+    "name": "Bánh xèo nem lụi",
+    "destination": "Đà Nẵng",
+    "description": "Bánh xèo vỏ giòn rụm cuốn nem lụi nướng than hoa chấm nước sốt gan heo béo ngậy.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "đà nẵng",
+      "bánh xèo",
+      "nem lụi",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F220",
+    "name": "Chè sầu riêng Liên",
+    "destination": "Đà Nẵng",
+    "description": "Món tráng miệng nổi tiếng ngập tràn cơm sầu riêng tươi béo bùi kết hợp nước cốt dừa và thạch mát lạnh.",
+    "food_type": "ẩm thực đường phố",
+    "image": null,
+    "tags": [
+      "đà nẵng",
+      "chè sầu liên",
+      "tráng miệng",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F221",
+    "name": "Bún đỏ Buôn Ma Thuột",
+    "destination": "Đắk Lắk",
+    "description": "Tô bún sợi to màu đỏ gạch hạt điều ngập tràn riêu cua đồng tóp mỡ giòn trứng cút và rau cải non thanh mát.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đắk lắk",
+      "bún đỏ buôn ma thuột",
+      "ẩm thực đường phố"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F222",
+    "name": "Gà nướng cơm lam Bản Đôn",
+    "destination": "Đắk Lắk",
+    "description": "Gà thả rẫy ướp sả ớt nướng than giòn da ngọt thịt ăn cùng cơm lam dẻo thơm chấm muối ớt rừng xanh.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đắk lắk",
+      "gà nướng cơm lam",
+      "bản đôn",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F223",
+    "name": "Cà phê Robusta Buôn Ma Thuột",
+    "destination": "Đắk Lắk",
+    "description": "Hạt cà phê đậm đà thủ phủ Tây Nguyên với vị đắng nồng nàn hương thơm quyến rũ đánh thức mọi giác quan.",
+    "food_type": "cà phê & trà",
+    "image": null,
+    "tags": [
+      "đắk lắk",
+      "cà phê robusta",
+      "buôn ma thuột",
+      "cà phê & trà"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F224",
+    "name": "Cơm lam Đắk Nông nướng ống tre",
+    "destination": "Đắk Nông",
+    "description": "Cơm nếp nương dẻo ngọt nấu trong ống tre non thoang thoảng mùi khói thơm lừng chấm muối vừng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đắk nông",
+      "cơm lam đắk nông",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.7
+  },
+  {
+    "id": "F225",
+    "name": "Cá lăng nướng than sông Sêrêpôk",
+    "destination": "Đắk Nông",
+    "description": "Cá lăng dòng sông chảy ngược thịt ngọt béo ngậy nướng muối ớt cuốn bánh tráng rau rừng chấm muối kiến.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đắk nông",
+      "cá lăng nướng",
+      "sông sêrêpôk",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F226",
+    "name": "Lẩu đọt mây cá lóc",
+    "destination": "Đắk Nông",
+    "description": "Món lẩu độc đáo của người M'Nông vị đắng ngọt thanh của đọt mây hòa quyện cùng cá lóc ngọt thịt đậm đà.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đắk nông",
+      "lẩu đọt mây",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F227",
+    "name": "Gỏi cá Biên Hòa",
+    "destination": "Đồng Nai",
+    "description": "Cá trắm chép sông Đồng Nai tươi sống thái lát mỏng bóp thính mè cuốn bánh tráng lá đinh lăng chấm nước sốt tương nóng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đồng nai",
+      "gỏi cá biên hòa",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F228",
+    "name": "Bưởi Tân Triều",
+    "destination": "Đồng Nai",
+    "description": "Trái bưởi đường lá cam cùi mỏng tép mọng nước ngọt thanh chế biến thành gỏi bưởi tôm thịt hay rượu bưởi độc đáo.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đồng nai",
+      "bưởi tân triều",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F229",
+    "name": "Lẩu lá khổ qua rừng Long Khánh",
+    "destination": "Đồng Nai",
+    "description": "Lá khổ qua rừng vị đắng thanh nhúng lẩu cá thác lác dẻo dai ngọt nước giải nhiệt thanh lọc cơ thể.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đồng nai",
+      "lẩu khổ qua rừng",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.6
+  },
+  {
+    "id": "F230",
+    "name": "Cá lóc nướng trui cuốn lá sen non",
+    "destination": "Đồng Tháp",
+    "description": "Cá lóc đồng nướng rơm thơm lừng cuốn lá sen non tươi chát ngọt chấm nước mắm me chua cay đậm vị Tràm Chim.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đồng tháp",
+      "cá lóc nướng trui",
+      "lá sen non",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.9
+  },
+  {
+    "id": "F231",
+    "name": "Nem Lai Vung",
+    "destination": "Đồng Tháp",
+    "description": "Chiếc nem chua thơm nức mùi tiêu sọ thịt heo tươi giòn sần sật bì gói lá chuối xanh chấm tương ớt cay nồng.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đồng tháp",
+      "nem lai vung",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  },
+  {
+    "id": "F232",
+    "name": "Hủ tiếu Sa Đéc",
+    "destination": "Đồng Tháp",
+    "description": "Sợi hủ tiếu bột Sa Đéc dai mềm trắng trong chan nước súp xương ngọt lịm hoặc ăn khô trộn nước sốt tương đậm đà.",
+    "food_type": "đặc sản địa phương",
+    "image": null,
+    "tags": [
+      "đồng tháp",
+      "hủ tiếu sa đéc",
+      "đặc sản địa phương"
+    ],
+    "rating": 4.8
+  }
+]
